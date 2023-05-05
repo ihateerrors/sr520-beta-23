@@ -15,11 +15,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- <link rel="icon" href="favicon.ico" /> -->
 <link rel="icon" href="dot.ico" type="image/vnd.microsoft.icon" />
-<!-- <script src="/sites/default/files/google_tag/gtm_kjkscvk/google_tag.script.js?rtoq0t" defer></script> -->
+<script src="/sites/default/files/google_tag/gtm_kjkscvk/google_tag.script.js?rtoq0t" defer></script>
 
     <title>SR 520 Construction | WSDOT</title>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-
     <link rel="stylesheet" media="all" href="/css/styles1.css" />
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css" integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
 <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.min.css" integrity="sha512-tGFFYdzcicBwsd5EPO92iUIytu9UkQR3tLMbORL9sfi/WswiHkA1O3ri9yHW+5dXk18Rd+pluMeDBrPKSwNCvw==" crossorigin="anonymous" />
@@ -32,10 +30,8 @@
 <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&amp;display=swap" />
 <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&amp;display=swap" />
 <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" />
-
-<!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css" /> -->
 <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
-<script src="/Scripts/jquery-min.js"></script>
+<script src="/scripts/jquery-min.js"></script>
 <!-- <script src="https://use.fontawesome.com/ee1c3da296.js"></script> -->
 <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
 <script src="https://kit.fontawesome.com/da8d22a218.js" crossorigin="anonymous"></script>
@@ -46,30 +42,36 @@ crossorigin=""/>
 <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
 integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
 crossorigin=""></script>
-<!-- end leaflet scripts -->
-<script src="/Scripts/moment.js" type="text/javascript"></script>
-<script src="/Scripts/ActivityMap.js?v=1.1" type="text/javascript"></script>
-
-<script src="/Scripts/script5.js" type="text/javascript"></script>
-<script src="/Scripts/script6.js" type="text/javascript"></script>
-<script>
-      var $buoop = { c: 2 };
-      function $buo_f() {
-          var e = document.createElement("script");
-          e.src = "//browser-update.org/update.min.js";
-          document.body.appendChild(e);
-      };
-      try {
-          document.addEventListener("DOMContentLoaded", $buo_f, false);
-      }
-      catch (e) {
-          window.attachEvent("onload", $buo_f);
-      }
-  </script>
 
 <style>
       .btn.search-form__submit {
-
+            /* appearance: button;
+background:  #97d700;
+border: 1pt solid  #97d700;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 4px;
+border-radius: 4px;
+border-top-left-radius: 0px;
+border-top-right-radius: 4px;
+box-sizing: border-box;
+color: inherit;
+cursor: pointer;
+display: inline-block;
+font: inherit;
+height: 34px;
+line-height: 20px;
+margin: 0px;
+margin-bottom: 0px;
+margin-left: -5px;
+margin-top: -4px;
+overflow: visible;
+padding: 2.5px 12px;
+text-align: center;
+text-transform: none;
+touch-action: manipulation;
+user-select: none;
+vertical-align: middle;
+white-space: nowrap; */
 background:  #97d700;
 border-bottom: 1px solid  #6699ee;
 border-bottom-right-radius: 4px;
@@ -145,61 +147,12 @@ font-size: 1.4em;
 .parallelogram-link:hover {
     background-color: #1d3b1e;
 }
-.leaflet-popup-content-wrapper {
-background:  white;
-border-radius: 12px;
-box-shadow:  rgba(0, 0, 0, 0.4) 0px 3px 14px;
-max-width: 300px;
-/* box-sizing: unset; */
-color:  #333333;
-font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-font-size: 14px;
-line-height: 16.25px;
-padding: 1px;
-text-align: left;
-}
+
+
+
+
 
 </style>
-
-<script>
-
-      $(document).ready(function () {
-          $(".dateFilter").datepicker(
-              { showOn: "both", buttonImage: "/images/calendar.gif", buttonImageOnly: true }
-          );
-          showPlaces();
-      });
-  
-      function updateForm() {
-          clearMap();
-          showPlaces();
-      }
-  
-      function clickAll() {
-          $("input[name='typeId']").removeAttr("checked");
-          updateForm();
-      }
-  
-      function clickOne() {
-          var anyChecked = false;
-          var boxes = $("input[name='typeId']");
-          $.each(boxes, function (i, box) {
-              if (box.checked) {
-                  anyChecked = true;
-              }
-          });
-  
-          if (anyChecked) {
-              $("#anyBox").removeAttr("checked");
-          } else {
-              $("#anyBox").attr("checked", "checked");
-          }
-          updateForm();
-      }
-  
-  </script>
-  
-
   </head>
   <body class="major-projects-landing page-node-420 page-node-type-pathway_page path-node page-node-type-pathway-page has-glyphicons">
     <a href="#main-content" class="visually-hidden focusable skip-link">
@@ -295,7 +248,7 @@ text-align: left;
 
 
   
-  <div role="main" id="main-content" style="background-color: #FFFFFF;">
+  <div role="main" id="main-content" style="background-color: #FFFFFF;>
   <div class="content-top-wrapper">
   <section class="container">
             <div class="region region-content-top">
@@ -335,8 +288,231 @@ text-align: left;
   <article data-history-node-id="420" role="article" about="/construction-planning/major-projects" class="pathway-page full clearfix">
 
   
+    
+
+<!--   
+  <div class="content">
+    
+            <div class="field field--name-field-summary-plain-long field--type-string-long field--label-hidden field--item">View current major projects, which are investments we make with local partners to address safety, congestion, mobility for all users and/or fish passage responsibilities. </div>
+      
+  </div> -->
+
 </article>
 
+<section class="views-element-container block block-views block-views-blockmenu-blocks-block-1 clearfix" id="block-views-block-menu-blocks-block-1">
+  
+    
+
+      <div class="form-group"><div class="view view-menu-blocks view-id-menu_blocks view-display-id-block_1 js-view-dom-id-b94cb9bd224228d69672353d45fca4112806c797f23f400557693a2a2c3a80b5">
+  
+    
+      
+  
+          </div>
+</div>
+
+  </section>
+
+<section class="views-element-container block block-views block-views-blockview-pages-block-4 clearfix" id="block-views-block-view-pages-block-4-2">
+  
+    
+
+      <div class="form-group"><div class="view view-view-pages view-id-view_pages view-display-id-block_4 js-view-dom-id-0721d2504b482380b7d880b24667e42753fce37fd64c3372b79a6dcaeb2c3c17">
+  
+    
+  
+    
+      <div class="view-content">
+          <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2021-03/AWV-Map-ProgramMap.jpg?itok=jBKr6JBS" width="480" height="200" alt="Map showing Alaskan Way Viaduct program limits along Seattle waterfront, south end near stadiums and north end near Seattle Center" loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/alaskan-way-viaduct-replacement-program" hreflang="en">Alaskan Way Viaduct Replacement Program</a></h2>
+The Alaskan Way Viaduct Replacement Program consists of 30 projects led by the Washington State Department of Transportation, King County, the City of Seattle and the Port of Seattle. The Federal Highway Administration is a partner in this effort.
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2021-10/140326%20Tokitae%20sea%20trial%20Elliott%20Bay%20photo%20credit%20Vigor%20%281%29.jpg?itok=Z5e8CW1l" width="480" height="200" alt="Tokitae out on the harbor" loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/ferry-system-electrification" hreflang="en">Ferry system electrification</a></h2>
+Washington State Ferries (WSF) is embarking on an ambitious initiative to begin the transition to an emission-free fleet through a hybrid electric ferry system. WSF operates the largest ferry system in the United States. It is also the biggest contributor or greenhouse gas emissions of any state agency in Washington, burning 19 million gallons of diesel fuel to support 24 million passengers every year.<br />
+<br />
+This shift to hybrid electric ferries is in response to governor and legislative direction as well as alignment with the agency’s own long-range planning initiatives. To transition to a hybrid electric fleet, WSF is working on the three key elements of the electrification system – building new vessels, converting vessels, and electrifying the terminals.
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2021-11/405-webgraphic-v2.jpg?itok=gOe-fxgE" width="480" height="200" alt="A map showing the  I-405/SR 167 Corridor." loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/i-405sr-167-corridor-program" hreflang="en">I-405/SR 167 Corridor Program</a></h2>
+The I-405/SR 167 Corridor Program stems from the I-405 Master Plan and SR 167 Corridor Plan, foundational documents that guide project development, funding and delivery. The I-405 Master Plan alone includes over 150 projects designed to improve travel between Lynnwood and the Renton/Tukwila area. When combined with SR 167, this north-south corridor forms a 50+-mile transportation system providing travelers with a reliable trip in the express toll lanes, regular lanes and high-capacity transit (bus rapid transit).
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2021-03/I5%20jblm.PNG?itok=e1SONxOD" width="480" height="200" alt="Aerial photo of a congested I-5 through JBLM" loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/i-5-mounts-road-thorne-lane-ic-corridor-improvements" hreflang="en">I-5 - Mounts Road to Thorne Lane I/C - Corridor Improvements</a></h2>
+In July 2015, the Washington State Legislature included $495 million to fund the I-5 Mounts Road to Thorne Lane Interchange - Corridor Improvements project, as part of the Connecting Washington transportation revenue package. The project is funded through a 10 year period, from 2015-2025.
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2021-03/collage%20TCP%20HOV%20Final.png?itok=sXmH9A47" width="480" height="200" alt="Images of various construction projects in the I-5 SR 16 Tacoma Pierce County HOV Program" loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/i-5-sr-16-tacomapierce-county-hov-program" hreflang="en">I-5 - SR 16 Tacoma/Pierce County HOV Program</a></h2>
+The Tacoma/Pierce County HOV Program is a series of projects, spanning over 20 years, that build high-occupancy-vehicle (HOV) lanes on I-5, SR 16 and SR 167 in Pierce County. 
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2021-10/major-project-banner-SnoqualmiePassEast-1431-01.png?itok=6wwjFIWh" width="480" height="200" alt="Map of Snoqualmie Pass East" loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/i-90-snoqualmie-pass-east-project" hreflang="en">I-90 - Snoqualmie Pass East Project</a></h2>
+The I-90 Snoqualmie Pass East Project improves 15 miles from Hyak to Easton. Phases 1 and 2 from Hyak to the Stampede Pass interchange is complete. Phase 3 begins fall 2021. 
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2022-09/IWOW-Map-Header.png?itok=HgU9RY0K" width="480" height="200" alt="A map of the location of the Industrial Way/Oregon Way Intersection Improvements project. " loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/industrial-way-oregon-way-iwow-intersection-improvements-project" hreflang="en">Industrial Way/Oregon Way (IWOW) Intersection Improvements Project</a></h2>
+The Industrial Way/Oregon Way (IWOW) Intersection is a four-legged intersection with Industrial Way (SR 432) as the east and west legs, Oregon Way as the north leg and SR 433 as the south leg, which crosses the Columbia River into Oregon. <br />
+<br />
+The IWOW project is being designed to reduce traffic backups, improve travel reliability, maintain, or improve emergency response and facilitate more efficient travel through the corridor to support economic opportunities across the region. <br />
+
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2023-03/NSC-SCC-Phase1-Spokane_0.PNG?itok=A9tG7x2z" width="480" height="200" alt="Picture of the Phase 1 project of the North Spokane Corridor over Spokane Community College." loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/north-spokane-corridor" hreflang="en">North Spokane Corridor</a></h2>
+The North Spokane Corridor (NSC) is a 10.5-mile multi-modal corridor. When complete, the NSC will be a 60-mile per hour, north/south limited access facility that connects I-90 at the south (just west of the existing Thor/Freya interchange) and connects to US 2 (at Farwell Road) and US 395 (at Wandermere) on the north end. Various stages of construction remain to complete the project.
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2021-09/PugetSoundGateway-map.png?itok=VDskPu02" width="480" height="200" alt="This map shows the portions of SR 167 and SR 509 that will be completed under the Puget Sound Gateway Program" loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/puget-sound-gateway-program" hreflang="en">Puget Sound Gateway Program</a></h2>
+The Puget Sound Gateway Program combines the SR 509 Completion Project in King County and the SR 167 Completion Project in Pierce County to complete critical missing links in Washington state&#039;s highway and freight network. These projects build important new connections to the state&#039;s ports, improve the movement of freight and reduce congestion on local roads and highways. Both projects have multimodal benefits and together create 6.5 miles of new bike/pedestrian paths and 3.5 miles of new sidewalks.
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2021-10/Ferry%20ready%20to%20load%20at%20Fauntleroy_0.jpg?itok=6FIiVssW" width="480" height="200" alt="Cars wait for the ferry on the Fauntleroy Ferry Terminal dock" loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/sr-160-fauntleroy-terminal-trestle-transfer-span-replacement" hreflang="en">SR 160 - Fauntleroy Terminal - Trestle &amp; Transfer Span Replacement</a></h2>
+The SR 160 - Fauntleroy Terminal - Trestle &amp; Transfer Span Replacement project will replace the aging Fauntleroy ferry terminal to maintain safe and reliable ferry service for people who travel between West Seattle, Vashon Island, the Kitsap Peninsula and beyond. The terminal faces several challenges. Built in the 1950s, parts of the terminal are aging, seismically vulnerable and overdue for replacement. Rising sea levels could damage the structure from debris during high tides in the future .<br />
+
+</div></span></div></div>
+    <div class="views-row"><div class="views-field views-field-nothing"><span class="field-content"><div class="col-xl-5 col-lg-5"><div>
+  
+  
+  <div class="field field--name-field-media-image field--type-image field--label-visually_hidden">
+    <div class="field--label sr-only">Image</div>
+              <div class="field--item">  <img src="/sites/default/files/styles/max_480x350/public/2022-03/SR520-Picture-MontlakeProjectPanorama.jpg?itok=_nF3sgSj" width="480" height="200" alt="Panorama view of SR 520 across Union Bay. In the foreground is a work zone where crews are construction a new, parallel bridge. The highway is surrounded by a residential neighborhood." loading="lazy" typeof="Image" />
+
+
+</div>
+          </div>
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7"><h2><a href="https://wsdot.com/construction-planning/major-projects/sr-520-bridge-replacement-and-hov-program" hreflang="en">SR 520 Bridge Replacement and HOV Program</a></h2>
+The SR 520 Bridge Replacement and HOV Program enhances travel safety and mobility with modern, structurally stronger bridges, as well as substantial transit and roadway improvements along this urban corridor. Built in stages, the improvements extend from I-405 in Bellevue to I-5 in Seattle.
+</div></span></div></div>
+
+    </div>
+  
+      
+          </div>
+</div>
+
+  </section>
 
 
   </div>
@@ -345,138 +521,6 @@ text-align: left;
 
             
   </div>
-
-
-
-<!-- #########   start maps  ######## -->
-
-
-
-<div class="row">
-      <div class="col-md-12">
-          <div class="leftnav">
-              <div class="leftnavbox">
-  
-                  <div id="activityList" style="margin-top: 10px; margin-bottom: 10px;">
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="col-md-12 order-1 order-md-2">
-          <div id="main" class="clearfix">
-              <hr />
-              <h2 id="current-construction">Construction map</h2>
-  
-                      <p>
-                          Want to know what SR 520 construction activities are underway or coming soon? 
-                          You've come to the right place. The map below allows you to search by date, 
-                          activity or location for detailed information about current or upcoming construction 
-                          related to the SR 520 Program.</p>
-  
-              <div id="alertBox" style="display: none;">
-                  <h3 style="color: red">CLOSURE IN EFFECT; SEE BELOW</h3>
-                  <br />
-              </div>
-      
-              <div class="mapControlBox">
-                  <div class="dateBox" style="margin-bottom: 2em;">
-                      <span style="font-size: 1.2em; font-weight: bold">Date range:</span>
-  
-                      <input type="text" placeholder="Start Date" id="startDate" value="@DateTime.Today.ToShortDateString()" class="dateFilter" onchange="updateForm();"/>
-  
-                      <input type="text" placeholder="End Date" id="endDate" value="@DateTime.Today.AddDays(14).ToShortDateString()" class="dateFilter"  onchange="updateForm();"/>
-  
-                      <span>(select to change)</span>
-                  </div>
-                 <div class="featureBox">
-                      <label>
-                          <input type="checkbox" name="typeId" value="14437" onchange="clickOne(this);" />
-                          <img src="/Content/icons/redConeSm.png" />
-                          Highway Closures   
-                      </label>
-  
-                      <label>
-                          <input type="checkbox" name="typeId" value="14436" onchange="clickOne(this);" />
-                          <img src="/Content/icons/orangeConeSm.png" />
-                          Lane/Ramp Closures   
-                      </label>
-  
-                      <label>
-                          <input type="checkbox" name="typeId" value="14439" onchange="clickOne(this);" />
-                          <img src="/Content/icons/greenConeSm.png" />
-                          No Traffic Impact   
-                      </label>
-  
-                      <label>
-                          <input type="checkbox" name="typeId" value="14438" onchange="clickOne(this);" />
-                          Nighttime Work   
-                      </label>
-  
-                      <label>
-                          <input type="checkbox" value="Any" id="anyBox" checked="checked" onchange="clickAll();" />
-                          <span><strong>All work </strong></span>
-                      </label>
-                  </div> 
-  
-  
-              </div>
-              <div class="orangeMap">
-                  <div id="map"></div>
-                  <script>
-                   
-
-                        const map = L.map('map').setView([47.651151332237724, -122.24892667750544], 13);
-                  
-                        const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                              maxZoom: 19,
-                              attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-                        }).addTo(map);
-                  
-                        const marker = L.marker([47.634885, -122.227793]).addTo(map)
-                              .bindPopup('<b>Construction ongoing.</b><br />Roads are open as of DATE.').openPopup();
-                  
-                        const circle = L.circle([47.644915, -122.304155], {
-                              color: 'red',
-                              fillColor: '#f03',
-                              fillOpacity: 0.5,
-                              radius: 500
-                        }).addTo(map).bindPopup('Road closed from DATE to DATE');
-                  
-                        // const polygon = L.polygon([
-                        //       [51.509, -0.08],
-                        //       [51.503, -0.06],
-                        //       [51.51, -0.047]
-                        // ]).addTo(map).bindPopup('Construction, roads are open.');
-                  
-                  
-                        const popup = L.popup()
-                              .setLatLng([47.645117, -122.298691])
-                              .setContent('This is a message about Union Bay.')
-                              .openOn(map);
-                  
-                        function onMapClick(e) {
-                              popup
-                                    .setLatLng(e.latlng)
-                                    .setContent(`You clicked the map at ${e.latlng.toString()}`)
-                                    .openOn(map);
-                        }
-                  
-                        map.on('click', onMapClick);
-                  
-                  </script>
-              </div>
-              <p><em>Note: This tool is presented for planning purposes only. Construction work is inherently dependent on weather and other factors, and activities are subject to change. </em></p>
-          </div>
-      </div>
-  </div>
-  
-
-<!-- #########   end maps  ######## -->
-
-
-
-
-
 </div>
       
 
@@ -617,18 +661,18 @@ text-align: left;
 
 </div>
 <ul><li>Copyright WSDOT © </li>
-	<li><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="695c71b2-1d46-4c46-8254-43c89acc6a97" href="https://wsdot.com//about/policies/web-privacy-notice" title="Web privacy notice ">Privacy policy</a></li>
-	<li><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d0413277-1a29-489f-85f6-fa469a4c511f" href="https://wsdot.com//about/policies/agency-rule-making" title="Agency rule making ">Agency rule making</a></li>
+	<li><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="695c71b2-1d46-4c46-8254-43c89acc6a97" href="/about/policies/web-privacy-notice" title="Web privacy notice ">Privacy policy</a></li>
+	<li><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="d0413277-1a29-489f-85f6-fa469a4c511f" href="/about/policies/agency-rule-making" title="Agency rule making ">Agency rule making</a></li>
 </ul></div>
       
   </section>
 
-<!-- <script type="text/javascript"> 
+<script type="text/javascript"> 
 setTimeout(function(){var a=document.createElement("script");
 var b=document.getElementsByTagName("script")[0];
 a.src=document.location.protocol+"//script.crazyegg.com/pages/scripts/0032/9349.js?"+Math.floor(new Date().getTime()/3600000);
 a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-</script> -->
+</script>
 <script async src="https://siteimproveanalytics.com/js/siteanalyze_6285227.js"></script>
 
   </div>
@@ -1864,11 +1908,11 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
 </div></div>
     <script type="application/json" data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/420","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"responsive_menu":{"position":"right","theme":"theme-white","pagedim":"none","modifyViewport":true,"use_bootstrap":true,"breakpoint":"all and (max-width: 992px)","drag":false},"google_analytics":{"account":"UA-970887-21","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true},"data":{"extlink":{"extTarget":false,"extTargetAppendNewWindow":false,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":true,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":["wsdot.com","test.wsdot.com","www.wsdot.com","ftp.wsdot.wa.gov","wave2go.wsdot.com","secureapps.wsdot.wa.gov","wsdot.maps.arcgis.com"]}},"ckeditorAccordion":{"accordionStyle":{"collapseAll":1,"keepRowsOpen":null}},"bootstrap":{"forms_has_error_value_toggle":0},"user":{"uid":0,"permissionsHash":"a046f1e7eca0b89bb6f0c6ba2f67d00bb506c281b5cc0f2d1f019c9fcb1c530b"}}</script>
-<script src="/Scripts/script1.js"></script>
+<script src="/scripts/script1.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
-<script src="/Scripts/script2.js"></script>
+<script src="/scripts/script2.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
-<script src="/Scripts/script3.js"></script>
+<script src="/scripts/script3.js"></script>
 
   <script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"NRJS-a8107692ea83444c1a2","applicationID":"858811128","transactionName":"NVQHN0UEXhJUBkxQWgweJABDDF8PGiFKTEUDXTkNWAFVPXYKVk1HDV0JBkU5fg5RAG5QUBVyCg1DF18NWQBKFAsUWAAU","queueTime":0,"applicationTime":477,"atts":"GRMEQQ0eTRw=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
 </html>
