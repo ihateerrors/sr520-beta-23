@@ -344,18 +344,22 @@ img {
     line-height: 1.5;
 }
 .dateFilter {
-    width: 89px;
+    width: 120px;
     font-size: 16px;
-    margin-left: 15px;
+    margin-left: 25px;
+    margin-right: 5px;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
     font-weight: bold;
     color: #800080;
+    justify-content: space-around;
 }
 .dateBox {
     padding-bottom: 0;
 }
 .ui-datepicker-trigger {
-    width: 20px;
-    margin-left: 7px!important;
+    width: 25px;
+    margin-left: 3px!important;
 }
 
 .clearfix:before,
@@ -382,7 +386,9 @@ img {
     cursor: pointer;
 }
 #ui-datepicker-div {
-    z-index: 10!important;
+    z-index: 10000!important;
+    background-color: hotpink;
+    min-width: 300px;
 }
 .details {
     white-space: pre-line;
@@ -405,7 +411,7 @@ img {
 
 .divIconLabel-orange {
     color: #ffffff;
-    background-image: url(../Content/icons/orangeCone.png);
+    background-image: url(/Content/icons/orangeCone.png);
     background-repeat: no-repeat;
     /*background-color: orange;*/
     padding: 10px 12px;
@@ -427,7 +433,7 @@ img {
 }
 .divIconLabel-green {
     color: #ffffff;
-    background-image: url(../Content/icons/orangeCone.png);
+    background-image: url(/Content/icons/orangeCone.png);
     /*background-color: green;*/
     padding: 10px;
     /*border-radius: 4px;*/
@@ -444,7 +450,7 @@ img {
 
 .divIconLabel-red {
     color: #ffffff;
-    background-image: url(../Content/icons/orangeCone.png);
+    background-image: url(/Content/icons/orangeCone.png);
     /*background-color: red;*/
     padding: 10px;
     /*border-radius: 4px;*/
@@ -460,7 +466,8 @@ img {
 }
 
 .mapControlBox {
-    /*margin-bottom: 10px;*/
+    min-width: 200px;
+    margin-bottom: 10px;
     padding: 10px;
     background-color: #fbfbfb;
     border: 1px solid #000000;
@@ -994,3 +1001,11 @@ textarea {
 }
 
 
+.my-custom-icon {
+    filter: none; /* Remove any CSS filters */
+    /* Add any other CSS rules necessary to restore the original appearance of the icon */
+  }
+
+  .leaflet-marker-icon .my-custom-icon .leaflet-zoom-animated .leaflet-interactive {
+    filter: none !important;
+  }
