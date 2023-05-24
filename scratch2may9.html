@@ -207,6 +207,9 @@ text-decoration: none !important;
   
  }
 
+ .d-none {
+  display: none !important;
+ }
   </style>
 
   <script>
@@ -255,8 +258,8 @@ text-decoration: none !important;
   <a href="#main-content" class="visually-hidden focusable skip-link">
     Skip to main content
   </a>
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJKSCVK" height="0" width="0"
-      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KJKSCVK" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript> -->
   <div class="dialog-off-canvas-main-canvas" style="background-color: #FFFFFF;">
     <header id="header">
       <div class="header-wrapper">
@@ -293,14 +296,10 @@ text-decoration: none !important;
 
             <section id="block-responsivemenumobileicon"
               class="responsive-menu-toggle-wrapper responsive-menu-toggle block block-responsive-menu block-responsive-menu-toggle clearfix">
-
-
-
               <a id="toggle-icon" class="toggle responsive-menu-toggle-icon" title="Menu" href="#off-canvas">
                 <span class="icon"></span><span class="label">Menu</span>
               </a>
             </section>
-
 
           </div>
 
@@ -356,9 +355,7 @@ text-decoration: none !important;
       </div>
     </div>
 
-
-
-
+<!-- #### END NAV section ##### -->
 
     <div role="main" id="main-content" style="background-color: #FFFFFF;">
       <div class="content-top-wrapper">
@@ -392,10 +389,12 @@ text-decoration: none !important;
               <p
                 style="color:  #333333; font-family: Lato, sans-serif; font-size: 2.25rem; line-height: 2.813rem; width: 75%; font-weight: 600;">
                 The go-to source for information on SR 520 construction and closures</p>
-
+                
               <div class="container-pgram d-flex justify-content-center">
-                <a href="#map" class="parallelogram-link">520 Construction Corner Map</a>&nbsp;&nbsp;
-                <a href="#" class="parallelogram-link">WSDOT Real-Time Travel Map</a>
+                <!-- <a href="#map" class="parallelogram-link"></a> -->
+
+                <button id="toggleMap" class="btn btn-secondary parallelogram-link"> TOGGLE TEST 520 Construction Corner Map</button>&nbsp;&nbsp;
+                <!-- <a href="#" class="parallelogram-link">WSDOT Real-Time Travel Map</a> -->
               </div>
 
               <div data-drupal-messages-fallback class="hidden"></div>
@@ -415,75 +414,97 @@ text-decoration: none !important;
         </div>
 
 
-
+      </div>
         <!-- #########   start maps  ######## -->
 
 
+        <div class="container">
+          <div class="row">
+              <!-- Map Column -->
+              <div class="col-lg-8 col-sm-12">
+                  <!--  Map Here -->    
+      
+                  <form id="date-range-form">
+                    <label for="start-date-input">Start Date:</label>
+                    <input type="date" id="start-date-input" name="start-date-input">
+                  
+                    <label for="end-date-input">End Date:</label>
+                    <input type="date" id="end-date-input" name="end-date-input">
+                  
+                    <input type="submit" value="Submit">
+                  </form>
+    
+                  <div id="map1" class="d-block">
+                     <!-- <div class="orangeMap"> -->
+                      <div id="map"></div>
+<!--     
+                      </div> -->
+          
+                    </div>
 
-        <div class="row">
-          <div class="col-md-12">
-            <div class="leftnav">
-              <div class="leftnavbox">
 
-                <div id="activityList" style="margin-top: 10px; margin-bottom: 10px;">
-                </div>
+              <!-- iframe Map -->
+            <div id="map2" class="d-none">
+              <iframe src="https://wsdot.com/Travel/Real-time/Map/?featuretype=camera&featureid=9648" width="100%" height="500px"></iframe>
+             </div>
+
+           <!-- Map Toggle Button -->
+          
               </div>
-            </div>
+      
+
+
+              </div>
+      
+              <!-- Right Sidebar -->
+              <div class="col-lg-4 col-sm-12">
+                  <!-- Card 1 -->
+                  <div class="card mb-3">
+                      <img src="path_to_your_image_1" class="card-img-top" alt="Description of image 1">
+                      <div class="card-body">
+                          <p class="card-text">Text for image 1</p>
+                          <a href="link_to_other_page_1" class="btn btn-primary">Button for image 1</a>
+                      </div>
+                  </div>
+                  
+                  <!-- Card 2 -->
+                  <div class="card mb-3">
+                      <img src="path_to_your_image_2" class="card-img-top" alt="Description of image 2">
+                      <div class="card-body">
+                          <p class="card-text">Text for image 2</p>
+                          <a href="link_to_other_page_2" class="btn btn-primary">Button for image 2</a>
+                      </div>
+                  </div>
+              </div>
           </div>
-          <div class="col-md-12 order-1 order-md-2">
+      <!-- </div> -->
+
+      
+<script> 
+      document.getElementById('toggleMap').addEventListener('click', function() {
+        var map1 = document.getElementById('map1');
+        var map2 = document.getElementById('map2');
+        
+        if (map1.classList.contains('d-none')) {
+            map1.classList.remove('d-none');
+            map1.classList.add('d-block');
+            map2.classList.remove('d-block');
+            map2.classList.add('d-none');
+        } else {
+            map1.classList.remove('d-block');
+            map1.classList.add('d-none');
+            map2.classList.remove('d-none');
+            map2.classList.add('d-block');
+        }
+    });
+    </script>
+    
+          <!-- ## start old columns ## -->
+          <!-- <div class="col-md-12 order-1 order-md-2">
             <div id="main" class="clearfix">
               <hr />
      
-
-              <div id="alertBox" style="display: none;">
-                <h3 style="color: red">CLOSURE IN EFFECT; SEE BELOW</h3>
-                <br />
-              </div>
-
-              <!-- <div class="mapControlBox">
-                <div class="dateBox" style="margin-bottom: 2em;">
-                  <span style="font-size: 1.2em; font-weight: bold">Date range:</span>
-
-                  <input type="text" placeholder="Start Date" id="startDate" value="@DateTime.Today.ToShortDateString()"
-                    class="dateFilter" onchange="updateForm();" />
-
-                  <input type="text" placeholder="End Date" id="endDate"
-                    value="@DateTime.Today.AddDays(14).ToShortDateString()" class="dateFilter"
-                    onchange="updateForm();" />
-
-                  <span>(select to change)</span>
-                </div>
-                <div class="featureBox">
-                  <label>
-                    <input type="checkbox" name="typeId" value="14437" onchange="clickOne(this);" />
-                    <img src="/Content/icons/redConeSm.png" />
-                    Highway Closures
-                  </label>
-
-                  <label>
-                    <input type="checkbox" name="typeId" value="14436" onchange="clickOne(this);" />
-                    <img src="/Content/icons/orangeConeSm.png" />
-                    Lane/Ramp Closures
-                  </label>
-
-                  <label>
-                    <input type="checkbox" name="typeId" value="14439" onchange="clickOne(this);" />
-                    <img src="https://sr520-beta2023.azurewebsites.net/Content/icons/orangeConeSm.png" />
-                    No Traffic Impact
-                  </label>
-
-                  <label>
-                    <input type="checkbox" name="typeId" value="14438" onchange="clickOne(this);" />
-                    Nighttime Work
-                  </label>
-
-                  <label>
-                    <input type="checkbox" value="Any" id="anyBox" checked="checked" onchange="clickAll();" />
-                    <span><strong>All work </strong></span>
-                  </label>
-                </div>
-              </div> -->
-
+         
               <form id="date-range-form">
                 <label for="start-date-input">Start Date:</label>
                 <input type="date" id="start-date-input" name="start-date-input">
@@ -497,300 +518,28 @@ text-decoration: none !important;
 
               <div class="orangeMap">
                 <div id="map"></div>
-                <script>
-const constructionSites = [
-    {
-        "coordinates": [47.644254, -122.303324],
-        "message": "Road closed due to construction from May 10 to May 20.",
-        "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangeCone.png",
-        "startDate": "2023-05-10",
-        "endDate": "2023-05-20"
-      },
-      {
-        "coordinates": [47.644601, -122.297916],
-        "message": "Bridge work from May 15 to May 25.",
-        "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangeCone.png",
-        "startDate": "2023-05-15",
-        "endDate": "2023-05-25"
-      },
 
-      {
-        "coordinates": [47.63662, -122.237921],
-        "message": "TEST work from May 7 to May 30 blah blah how does this format?.",
-        "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/redCone.png",
-        "startDate": "2023-05-07",
-        "endDate": "2023-05-30"
-      },
-
-      {
-        "coordinates": [47.642011, -122.310276],
-        "message": "TEST work from May 25 to June 30 blah blah how does this format?.",
-        "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/redCone.png",
-        "startDate": "2023-05-25",
-        "endDate": "2023-06-30"
-      }
-
-
-
-      // Add more construction sites here
-    ];
-  
-  function createCustomIcon(iconUrl) {
-    return L.icon({
-        iconUrl: iconUrl,
-        iconSize: [30, 30], // Size of the icon
-        iconAnchor: [12, 41], // Point of the icon which will correspond to the marker's location
-        popupAnchor: [0, -41], // Point from which the popup should open relative to the iconAnchor
-        className: 'my-custom-icon'
-      });
-  }
-  
-  // Initialize the Leaflet map
-  const map = L.map('map').setView([47.651151332237724, -122.24892667750544], 13);
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-  }).addTo(map);
-  
-  // Loop through the data source and create markers with pop-up messages and custom icons
-  constructionSites.forEach(site => {
-    const customIcon = createCustomIcon(site.iconUrl);
-    const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
-  
-    marker.bindPopup(site.message);
-  });
-
-  
-  const popup = L.popup()
-                    .setLatLng([47.645117, -122.298691])
-                    .setContent('This is a message about Union Bay.')
-                    .openOn(map);
-
-                  function onMapClick(e) {
-                    popup
-                      .setLatLng(e.latlng)
-                      .setContent(`You clicked the map at ${e.latlng.toString()}`)
-                      .openOn(map);
-                  }
-
-                  map.on('click', onMapClick);
-
-
-
-// Fetch your form and input elements
-const form = document.querySelector('#date-range-form');
-const startDateInput = document.querySelector('#start-date-input');
-const endDateInput = document.querySelector('#end-date-input');
-
-// Function to clear all markers from the map
-function clearMarkers() {
-  map.eachLayer(layer => {
-    if (layer instanceof L.Marker) {
-      map.removeLayer(layer);
-    }
-  });
-}
-
-// Function to add markers to the map
-function addMarkers(startDate, endDate) {
-  constructionSites.forEach(site => {
-    if (site.startDate <= endDate && site.endDate >= startDate) {
-      const customIcon = createCustomIcon(site.iconUrl);
-      const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
-      marker.bindPopup(site.message);
-    }
-  });
-}
-
-// Event listener for form submission
-form.addEventListener('submit', event => {
-  // Prevent the form from being submitted normally
-  event.preventDefault();
-
-  // Get the selected date range
-  const startDate = startDateInput.value;
-  const endDate = endDateInput.value;
-
-  // Clear the existing markers and add new ones based on the selected date range
-  if (startDate && endDate) {
-    clearMarkers();
-    addMarkers(startDate, endDate);
-  }
-});
-                </script>
               </div>
               <p><em>Note: This tool is presented for planning purposes only. Construction work is inherently dependent
                   on weather and other factors, and activities are subject to change. </em></p>
             </div>
-          </div>
-        </div>
-
+          </div> -->
+            <!-- ## END old columns ## -->
+    
 
         <!-- #########   end maps  ######## -->
-
 
         <h2 id="current-construction">Construction map</h2>
 
         <p>
           Want to know what SR 520 construction activities are underway or coming soon?
           You've come to the right place. The map below allows you to search by date,
-          activity or location for detailed information about current or upcoming construction
-          related to the SR 520 Program.</p>
+          activity or location for detailed information about current or upcoming construction related to the SR 520 Program.</p>
+        </div>
+        </div>
 
 
-      </div>
-
-
-      <!-- <div class="content-super-bottom-wrapper js-quickedit-main-content">
-      <div class="row">
-        <section class="container">
-            <div class="region region-content-super-bottom">
-    <section id="block-contentsuperbottomheading" class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 block block-block-content block-block-contentfebf12f0-f034-4dda-b83c-667d589540f7 clearfix">
-  
-    
-
-      
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h2><a data-entity-substitution="canonical" data-entity-type="node" data-entity-uuid="8f9db469-6893-4ca0-b777-53382fc19d97" href="/about/seasonal-events-programs/give-em-brake" title="Give 'em a brake">Learn more about work zone safety</a></h2></div>
-      
-  </section>
-
-<section id="block-performancehighlight1" class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 block block-block-content block-block-content18feff56-746b-478b-aa0f-23e2292a60d2 clearfix">
-  
-    
-
-      
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h3>Slow down – lives are on the line.</h3>
-
-<p>In 2022, speeding<strong> </strong>continued to be a top reason for work zone crashes.</p></div>
-      
-  </section>
-
-<section id="block-performancehighlight2" class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 block block-block-content block-block-content808f314b-715a-4e51-bc69-5f70c7fc4aa9 clearfix">
-  
-    
-
-      
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h3>Even one life lost is too many.</h3>
-
-<p>Each year about 670 people are killed nationally in highway work zones. In 2022, Washington had six fatal work zone crashes on state roads.</p></div>
-      
-  </section>
-
-<section id="block-performancehighlight3" class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 block block-block-content block-block-content35080349-cc83-48c2-9696-d88a589e7d1a clearfix">
-  
-    
-
-      
-            <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item"><h3>It's in EVERYONE’S best interest.</h3>
-
-<p>95% of people hurt in work zones are drivers, their passengers or passing pedestrians, not just our road crews.</p></div>
-      
-  </section>
-
-
-  </div>
-
-        </section>
-      </div>
-    </div> -->
-    </div>
-    <div role="contentinfo">
-      <div class="footer-wrapper">
-        <footer class="footer">
-          <div class="container">
-            <div class="region region-footer">
-              <section id="block-footer1"
-                class="col-lg-2 col-md-2 col-sm-6 col-xs-12 block block-block-content block-block-content056b448f-d00e-4781-b2d6-5903107de9ee clearfix">
-
-
-
-
-                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
-                  <ul>
-                    <li><a data-entity-substitution="canonical" data-entity-type="node"
-                        data-entity-uuid="0abeb7a4-afe4-4d76-9225-0836340d075b"
-                        href="/about/contacts/send-us-your-feedback" title="Send us your feedback">Contact</a></li>
-                    <li><a data-entity-substitution="canonical" data-entity-type="node"
-                        data-entity-uuid="8e6092c7-7d72-4caa-b088-5d20e7e47dec"
-                        href="/about/americans-disabilities-act-ada"
-                        title="Americans with Disabilities Act (ADA)">Accessibility</a></li>
-                    <li><a data-entity-substitution="canonical" data-entity-type="node"
-                        data-entity-uuid="974dfa0c-0e45-41f8-b995-dfada9fac536"
-                        href="/about/title-vi-limited-english-proficiency"
-                        title="Title VI/Limited English Proficiency">Title VI</a></li>
-                    <li><a href="https://wsdot.com/sitemap">Site index</a></li>
-                  </ul>
-                </div>
-
-              </section>
-
-              <section id="block-footer2"
-                class="col-lg-4 col-md-4 col-sm-6 col-xs-12 block block-block-content block-block-contentd6f7d4a7-99f3-475f-85ec-c1f97dcc99e4 clearfix">
-
-
-
-
-                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
-                  <p class="update"> <span class="fontawesome-icon-inline"><span class="fas fa-envelope"></span>
-                    </span><strong><a href="https://public.govdelivery.com/accounts/WADOT/subscriber/new">Sign up for
-                        email updates</a></strong></p>
-                  <p>Subscribe to customized emails to help you know before you go. Receive current traffic conditions,
-                    mountain pass reports, construction updates and more.</p>
-                </div>
-
-              </section>
-
-              <section id="block-footer3"
-                class="col-lg-2 col-md-2 col-sm-5 col-xs-6 block block-block-content block-block-contentb863acea-75cf-4d12-90c4-5c82a36558bb clearfix">
-
-
-
-
-                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
-                  <ul>
-                    <li><a href="https://wsdot.com/travel/travel-information-phone">WSDOT Traffic App</a></li>
-                    <li><a href="https://wa.gov/">WA.gov</a></li>
-                    <li><a href="https://governor.wa.gov/">Office of the Governor</a></li>
-                    <li><a href="https://wstc.wa.gov/">Transportation Commission</a></li>
-                    <li><a href="https://mygoodtogo.com/">Good To Go! Tolling</a></li>
-                  </ul>
-                </div>
-
-              </section>
-
-              <section id="block-footer4"
-                class="col-lg-4 col-md-4 col-sm-5 col-xs-5 block block-block-content block-block-content80cdc4af-54f5-4f24-9819-27bf6eaf6232 clearfix">
-
-
-
-
-                <div class="field field--name-body field--type-text-with-summary field--label-hidden field--item">
-                  <ul>
-                    <li><a href="https://www.facebook.com/wsdot"><span class="fontawesome-icon-inline"><span
-                            class="fab fa-facebook-square"></span></span><span class="social-text">Facebook</span></a>
-                    </li>
-                    <li><a href="https://twitter.com/wsdot"><span class="fontawesome-icon-inline"><span
-                            class="fab fa-twitter-square"></span></span><span class="social-text">Twitter</span></a>
-                    </li>
-                    <li><a href="https://www.instagram.com/wsdot/"><span class="fontawesome-icon-inline"><span
-                            class="fab fa-instagram"></span></span><span class="social-text">Instagram</span></a></li>
-                    <li><a href="https://www.youtube.com/wsdot"><span class="fontawesome-icon-inline"><span
-                            class="fab fa-youtube-square"></span></span><span class="social-text">YouTube</span></a>
-                    </li>
-                    <li><a href="https://wsdotblog.blogspot.com/"><span class="fontawesome-icon-inline"><span
-                            class="fab fa-blogger"></span></span><span class="social-text">WSDOT Blog</span></a></li>
-                    <li><a href="https://www.flickr.com/photos/wsdot/"><span class="fontawesome-icon-inline"><span
-                            class="fab fa-flickr"></span></span><span class="social-text">WSDOT Flickr</span></a></li>
-
-                  </ul>
-                </div>
-
-              </section>
-
-
-            </div>
-
-          </div>
-        </footer>
+   
       </div>
 
       <div class="footer-bottom">
@@ -2552,6 +2301,126 @@ a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
 
     </div>
   </div>
+  <script>
+    const constructionSites = [
+        {
+            "coordinates": [47.644254, -122.303324],
+            "message": "Road closed due to construction from May 10 to May 20.",
+            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangeCone.png",
+            "startDate": "2023-05-10",
+            "endDate": "2023-05-20"    
+          },
+          {
+            "coordinates": [47.644601, -122.297916],
+            "message": "Bridge work from May 15 to May 25.",
+            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangeCone.png",
+            "startDate": "2023-05-15",
+            "endDate": "2023-05-25"
+          },
+    
+          {
+            "coordinates": [47.63662, -122.237921],
+            "message": "TEST work from May 7 to May 30 blah blah how does this format?.",
+            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/redCone.png",
+            "startDate": "2023-05-07",
+            "endDate": "2023-05-30"
+          },
+    
+          {
+            "coordinates": [47.642011, -122.310276],
+            "message": "TEST work from May 25 to June 30 blah blah how does this format?.",
+            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/redCone.png",
+            "startDate": "2023-05-25",
+            "endDate": "2023-06-30"
+          }
+    
+    
+    
+          // Add more construction sites here
+        ];
+      
+      function createCustomIcon(iconUrl) {
+        return L.icon({
+            iconUrl: iconUrl,
+            iconSize: [30, 30], // Size of the icon
+            iconAnchor: [12, 41], // Point of the icon which will correspond to the marker's location
+            popupAnchor: [0, -41], // Point from which the popup should open relative to the iconAnchor
+            className: 'my-custom-icon'
+          });
+      }
+      
+      // Initialize the Leaflet map
+      const map = L.map('map').setView([47.651151332237724, -122.24892667750544], 13);
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      }).addTo(map);
+      
+      // Loop through the data source and create markers with pop-up messages and custom icons
+      constructionSites.forEach(site => {
+        const customIcon = createCustomIcon(site.iconUrl);
+        const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
+      
+        marker.bindPopup(site.message);
+      });
+    
+      
+      const popup = L.popup()
+                        .setLatLng([47.645117, -122.298691])
+                        .setContent('This is a message about Union Bay.')
+                        .openOn(map);
+    
+                      function onMapClick(e) {
+                        popup
+                          .setLatLng(e.latlng)
+                          .setContent(`You clicked the map at ${e.latlng.toString()}`)
+                          .openOn(map);
+                      }
+    
+                      map.on('click', onMapClick);
+    
+    
+    
+    // Fetch form and input elements
+    const form = document.querySelector('#date-range-form');
+    const startDateInput = document.querySelector('#start-date-input');
+    const endDateInput = document.querySelector('#end-date-input');
+    
+    // Function to clear all markers from the map
+    function clearMarkers() {
+      map.eachLayer(layer => {
+        if (layer instanceof L.Marker) {
+          map.removeLayer(layer);
+        }
+      });
+    }
+    
+    // Function to add markers to the map
+    function addMarkers(startDate, endDate) {
+      constructionSites.forEach(site => {
+        if (site.startDate <= endDate && site.endDate >= startDate) {
+          const customIcon = createCustomIcon(site.iconUrl);
+          const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
+          marker.bindPopup(site.message);
+        }
+      });
+    }
+    
+    // Event listener for form submission
+    form.addEventListener('submit', event => {
+      // Prevent the form from being submitted normally
+      event.preventDefault();
+    
+      // Get the selected date range
+      const startDate = startDateInput.value;
+      const endDate = endDateInput.value;
+    
+      // Clear the existing markers and add new ones based on the selected date range
+      if (startDate && endDate) {
+        clearMarkers();
+        addMarkers(startDate, endDate);
+      }
+    });
+                    </script>
   <script type="application/json"
     data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/420","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"responsive_menu":{"position":"right","theme":"theme-white","pagedim":"none","modifyViewport":true,"use_bootstrap":true,"breakpoint":"all and (max-width: 992px)","drag":false},"google_analytics":{"account":"UA-970887-21","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true},"data":{"extlink":{"extTarget":false,"extTargetAppendNewWindow":false,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":true,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":["wsdot.com","test.wsdot.com","www.wsdot.com","ftp.wsdot.wa.gov","wave2go.wsdot.com","secureapps.wsdot.wa.gov","wsdot.maps.arcgis.com"]}},"ckeditorAccordion":{"accordionStyle":{"collapseAll":1,"keepRowsOpen":null}},"bootstrap":{"forms_has_error_value_toggle":0},"user":{"uid":0,"permissionsHash":"a046f1e7eca0b89bb6f0c6ba2f67d00bb506c281b5cc0f2d1f019c9fcb1c530b"}}</script>
   <script src="/Scripts/script1.js"></script>
