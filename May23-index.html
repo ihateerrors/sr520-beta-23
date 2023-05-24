@@ -168,8 +168,8 @@
       background: white;
       border-radius: 12px;
       box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 14px;
-      max-width: 300px;
-      /* box-sizing: unset; */
+
+      box-sizing: unset;
       color: #333333;
       font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
       font-size: 14px;
@@ -177,6 +177,14 @@
       padding: 1px;
       text-align: left;
     }
+
+    .leaflet-popup-content {
+        word-wrap: break-word;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+      }
+
 
  .container3  {
   display: flex;
@@ -861,7 +869,7 @@ dialog::backdrop {
 
             </div>
             <ul>
-              <li>Copyright WSDOT © </li>
+              <li>Copyright WSDOT ©2023 </li>
               <li><a data-entity-substitution="canonical" data-entity-type="node"
                   data-entity-uuid="695c71b2-1d46-4c46-8254-43c89acc6a97"
                   href="https://wsdot.com//about/policies/web-privacy-notice" title="Web privacy notice ">Privacy
@@ -886,13 +894,15 @@ dialog::backdrop {
             "coordinates": [47.644254, -122.303324],
             "message": "Road closed due to construction from May 10 to May 20.",
             "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangeCone.png",
+            "iconSize": "40",
             "startDate": "2023-05-10",
             "endDate": "2023-05-20"    
           },
           {
             "coordinates": [47.644601, -122.297916],
             "message": "Bridge work from May 15 to May 25.",
-            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangeCone.png",
+            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangecone-new.png",
+            "iconSize": "40",
             "startDate": "2023-05-15",
             "endDate": "2023-05-25"
           },
@@ -901,6 +911,7 @@ dialog::backdrop {
             "coordinates": [47.63662, -122.237921],
             "message": "TEST work from May 7 to May 30.",
             "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangecone-md.png",
+            "iconSize": "40",
             "startDate": "2023-05-07",
             "endDate": "2023-05-30"
           },
@@ -908,7 +919,8 @@ dialog::backdrop {
           {
             "coordinates": [47.642011, -122.310276],
             "message": "TEST work from May 25 to June 30.",
-            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/redCone.png",
+            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/caution2.png",
+            "iconSize": "40",
             "startDate": "2023-05-25",
             "endDate": "2023-06-30"
           },
@@ -917,8 +929,9 @@ dialog::backdrop {
 
           {
             "coordinates": [47.636487, -122.240839],
-            "message": "May 1 to June 5: Construction, no traffic interruption",
-            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/road-closed-lg.png",
+            "message": "<h2 style='font-size: 18px; font-weight: 600'>May 1 to June 5: Construction, no traffic interruption</h2>",
+            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangecone-md.png",
+            "iconSize": "70",
             "startDate": "2023-05-01",
             "endDate": "2023-06-05"
           },
@@ -927,7 +940,8 @@ dialog::backdrop {
           {
             "coordinates": [ 47.633492, -122.23333],
             "message": "May 1 to June 5: Construction, no traffic interruption",
-            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/road-closed-md2.png",
+            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/road-closed-lg.png",
+            "iconSize": "120",
             "startDate": "2023-05-01",
             "endDate": "2023-06-05"
           },
@@ -935,7 +949,8 @@ dialog::backdrop {
           {
             "coordinates": [47.642011, -122.310276],
             "message": "TEST work from May 25 to June 30.",
-            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/caution-sign.png",
+            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/caution2.png",
+            "iconSize": "30",
             "startDate": "2023-05-25",
             "endDate": "2023-06-30"
           }
@@ -943,10 +958,10 @@ dialog::backdrop {
           // Add more construction sites here
         ];
       
-      function createCustomIcon(iconUrl) {
+      function createCustomIcon(iconUrl, size) {
         return L.icon({
             iconUrl: iconUrl,
-            iconSize: [30, 30], // Size of the icon
+            iconSize: [size, size], // Size of the icon
             iconAnchor: [12, 41], // Point of the icon which will correspond to the marker's location
             popupAnchor: [0, -41], // Point from which the popup should open relative to the iconAnchor
             className: 'my-custom-icon'
@@ -961,7 +976,7 @@ dialog::backdrop {
       
       // Loop through the data source and create markers with pop-up messages and custom icons
       constructionSites.forEach(site => {
-        const customIcon = createCustomIcon(site.iconUrl);
+        const customIcon = createCustomIcon(site.iconUrl, site.iconSize);
         const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
       
         marker.bindPopup(site.message);
@@ -981,8 +996,8 @@ dialog::backdrop {
                         // [47.642057, -122.277832]
 
                   ], {
-                    color: 'red',
-                    fillColor: '#f03',
+                    color: '#97d700',
+                    fillColor: '#97d700',
                     fillOpacity: 0.3
                
                   }).addTo(map).bindPopup('Construction, roads are open.');
