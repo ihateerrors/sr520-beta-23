@@ -565,44 +565,36 @@ dialog::backdrop {
                   <div id="map1" class="d-block mapcontainer">
                     <p class="mt-5" style="font-weight: 400; line-height: 40px;">Want to know what SR 520 construction activities are underway or coming soon? Search by date or and click on the icons on the map below for more details.</p>
                     <div style="display: inline-flex; flex-direction: row;"> 
-                    <form id="date-range-form" style="margin-bottom: 12px; z-index: 1000;">
+                    <form id="filter-form" style="margin-bottom: 12px; z-index: 1000;">
                       <label for="start-date-input">Start Date:</label>
                       <input type="date" id="start-date-input" name="start-date-input">&nbsp;&nbsp;&nbsp;&nbsp;
-                    
-                      <label for="end-date-input">End Date:</label>
+                                  <label for="end-date-input">End Date:</label>
                       <input type="date" id="end-date-input" name="end-date-input">
-
-                      <div id="filter-form">
                         <label>
                           <input type="checkbox" id="full-closure" name="type" value="Full Highway Closure" />
                           <img src="/Content/icons/red-dash.png"  width="25" height="25" />
                           Full highway closures
-                        </label>
-      
+                        </label>      
                         <label>
                           <input type="checkbox" id="partial-closure" name="type" value="Full Highway Closure" />
                           <img src="/Content/icons/red-dash.png"  width="25" height="25"/>
                          Partial highway closures
-                        </label>
-                        
+                        </label>                        
                         <label>
                           <input type="checkbox" id="high-impact" name="type" value="High Impact Construction"/>
                           <img src="/Content/icons/orangecone-md.png"  width="30" height="30"/>
                           High impact construction
-                        </label>
-      
+                        </label>      
                         <label>
                           <input type="checkbox" id="camera-yes" name="type" value="Camera"  />
                           <img src="/Content/icons/camera-green.png" width="25" height="25" />
                          Cameras
-                        </label>
-      
+                        </label>  
       
                         <label>
                           <input type="checkbox"  id="all" name="type" value="All" />
                           <span><strong>All work </strong></span>
-                        </label>
-                      </div>
+                        </label>                  
                     
                       <input type="submit" value="Submit">&nbsp;
                     </form>
@@ -610,30 +602,6 @@ dialog::backdrop {
                   </div>
 
 
-<!-- 
-                  <form id="filter-form" style="margin-bottom: 12px; z-index: 1000;">
-               
-                  
-                    <label>
-                      <input type="checkbox" id="full-closure" name="type" value="Full Highway Closure">
-                      <img src="full-closure-icon.png" width="30" height="30">
-                      Full Highway Closure
-                    </label><br>
-                
-                  
-                    <input type="submit" value="Submit">
-                  </form>
-                   -->
-                  <!-- <select id="location-select" style="line-height: 40px; height: 41px; margin-left: 14px">
-                    <option value="">--Location--</option>
-                    <option value="Location 1">Montlake</option>
-                    <option value="Location 2">Portage Bay</option>
-                    <option value="Location 3">Hunts Point</option>
-                    <option value="Location 4">Yarrow Point</option>
-                    <option value="Location 4">Evergreen Point Floating Bridge</option>
-            
-                  </select> -->
-                     <!-- <div class="orangeMap"> -->
                       <div id="map"></div>
                       </div>
 <!--     
@@ -1009,8 +977,7 @@ dialog::backdrop {
             "iconSize": "40",
             "startDate": "2023-05-10",
             "endDate": "2023-05-20",
-            "location": "Location 1",
-            "type": "Full Highway Closure"    
+                  "type": "Full Highway Closure"    
           },
           {
             "coordinates": [47.636191, -122.229373],
@@ -1018,8 +985,7 @@ dialog::backdrop {
             "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangecone-md.png",
             "iconSize": "40",
             "startDate": "2023-05-15",
-            "endDate": "2023-05-25",
-            "location": "Location 2",   
+            "endDate": "2023-05-25",          
             "type": "Full Highway Closure"  
           },
     
@@ -1030,30 +996,29 @@ dialog::backdrop {
             "iconSize": "40",
             "startDate": "2023-05-07",
             "endDate": "2023-05-30",
-            "location": "Location 1", 
+            "type": "Camera"  
           },
           {
             "coordinates": [47.63662, -122.237921],
             "message": "<h2 style='font-size: 18px; font-weight: 600'>May 7 to June 30:</h2><p>Something about this.</p>",
-            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangecone-md.png",
+            "iconUrl": "/camera-green.png",
             "iconSize": "40",
             "startDate": "2023-05-07",
             "endDate": "2023-05-30",
-            "location": "Location 3",   
-            "type": "Full Highway Closure"   
+              "type": "Full Highway Closure"   
           },
     
     
-          {
-            "coordinates": [47.641807, -122.316945],
-            "message": "<h2 style='font-size: 18px; font-weight: 600'>May 25 to June 5:</h2><p>Construction, road remains open.</p>",
-            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/caution2.png",
-            "iconSize": "35",
-            "startDate": "2023-05-25",
-            "endDate": "2023-06-30",
-            "location": "Location 1",   
-            "type": "Full Highway Closure"   
-          },
+        //   {
+        //     "coordinates": [47.641807, -122.316945],
+        //     "message": "<h2 style='font-size: 18px; font-weight: 600'>May 25 to June 5:</h2><p>Construction, road remains open.</p>",
+        //     "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/caution2.png",
+        //     "iconSize": "35",
+        //     "startDate": "2023-05-25",
+        //     "endDate": "2023-06-30",
+        //     "location": "Location 1",   
+        //     "type": "Full Highway Closure"   
+        //   },
     
          
 
@@ -1065,7 +1030,7 @@ dialog::backdrop {
             "startDate": "2023-05-22",
             "endDate": "2023-06-05",
             "location": "Location 5",   
-            "type": "Full Highway Closure"   
+            "type": "Camera"   
           },
 
           
@@ -1156,7 +1121,8 @@ dialog::backdrop {
     const form = document.querySelector('#date-range-form');
     const startDateInput = document.querySelector('#start-date-input');
     const endDateInput = document.querySelector('#end-date-input');
-    
+    const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
+
 
     function clearMarkers() {
       map.eachLayer(layer => {
@@ -1165,16 +1131,36 @@ dialog::backdrop {
         }
       });
     }
-     
-    function addMarkers(startDate, endDate) {
-      constructionSites.forEach(site => {
-        if (site.startDate <= endDate && site.endDate >= startDate) {
-          const customIcon = createCustomIcon(site.iconUrl);
-          const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
-          marker.bindPopup(site.message);
-        }
-      });
+
+
+     function addMarkers(selectedCoordinates, selectedStartDate, selectedEndDate, selectedTypes) {
+  clearMarkers();
+  constructionSites.forEach(site => {
+    let siteStartDate = new Date(site.startDate);
+    let siteEndDate = new Date(site.endDate);
+
+    if (site.coordinates[0] === selectedCoordinates[0] &&
+        site.coordinates[1] === selectedCoordinates[1] &&
+        siteStartDate >= selectedStartDate &&
+        siteEndDate <= selectedEndDate &&
+        selectedTypes.includes(site.type)) {
+      const customIcon = createCustomIcon(site.iconUrl, site.iconSize);
+      const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
+      marker.bindPopup(site.message);
+      markers.push(marker);
     }
+  });
+}
+
+    // function addMarkers(startDate, endDate) {
+    //   constructionSites.forEach(site => {
+    //     if (site.startDate <= endDate && site.endDate >= startDate) {
+    //       const customIcon = createCustomIcon(site.iconUrl);
+    //       const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
+    //       marker.bindPopup(site.message);
+    //     }
+    //   });
+    // }
     
     form.addEventListener('submit', event => {
       event.preventDefault();
@@ -1189,8 +1175,7 @@ dialog::backdrop {
 
 
                     </script>
-  <!-- <script type="application/json"
-    data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/420","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"responsive_menu":{"position":"right","theme":"theme-white","pagedim":"none","modifyViewport":true,"use_bootstrap":true,"breakpoint":"all and (max-width: 992px)","drag":false},"google_analytics":{"account":"UA-970887-21","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true},"data":{"extlink":{"extTarget":false,"extTargetAppendNewWindow":false,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":true,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":["wsdot.com","test.wsdot.com","www.wsdot.com","ftp.wsdot.wa.gov","wave2go.wsdot.com","secureapps.wsdot.wa.gov","wsdot.maps.arcgis.com"]}},"ckeditorAccordion":{"accordionStyle":{"collapseAll":1,"keepRowsOpen":null}},"bootstrap":{"forms_has_error_value_toggle":0},"user":{"uid":0,"permissionsHash":"a046f1e7eca0b89bb6f0c6ba2f67d00bb506c281b5cc0f2d1f019c9fcb1c530b"}}</script> -->
+
   <script src="/Scripts/script1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
     integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>

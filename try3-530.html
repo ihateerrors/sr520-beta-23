@@ -386,44 +386,6 @@ dialog::backdrop {
 }
   </style>
 
-  <script>
-    $(document).ready(function () {
-      $(".dateFilter").datepicker(
-        {showOn: "both", buttonImage: "/images/calendar.gif", buttonImageOnly: true}
-      );
-      showPlaces();
-    });
-
-    function updateForm() {
-      clearMap();
-      showPlaces();
-    }
-
-    function clickAll() {
-      $("input[name='typeId']").removeAttr("checked");
-      updateForm();
-    }
-
-    function clickOne() {
-      var anyChecked = false;
-      var boxes = $("input[name='typeId']");
-      $.each(boxes, function (i, box) {
-        if (box.checked) {
-          anyChecked = true;
-        }
-      });
-
-      if (anyChecked) {
-        $("#anyBox").removeAttr("checked");
-      } else {
-        $("#anyBox").attr("checked", "checked");
-      }
-      updateForm();
-    }
-  
-
-
-  </script>
 
 
 
@@ -565,14 +527,13 @@ dialog::backdrop {
                   <div id="map1" class="d-block mapcontainer">
                     <p class="mt-5" style="font-weight: 400; line-height: 40px;">Want to know what SR 520 construction activities are underway or coming soon? Search by date or and click on the icons on the map below for more details.</p>
                     <div style="display: inline-flex; flex-direction: row;"> 
-                    <form id="date-range-form" style="margin-bottom: 12px; z-index: 1000;">
+                    <form id="filter-form" style="margin-bottom: 12px; z-index: 1000;">
                       <label for="start-date-input">Start Date:</label>
                       <input type="date" id="start-date-input" name="start-date-input">&nbsp;&nbsp;&nbsp;&nbsp;
                     
                       <label for="end-date-input">End Date:</label>
                       <input type="date" id="end-date-input" name="end-date-input">
-
-                      <div id="filter-form">
+                      
                         <label>
                           <input type="checkbox" id="full-closure" name="type" value="Full Highway Closure" />
                           <img src="/Content/icons/red-dash.png"  width="25" height="25" />
@@ -602,7 +563,7 @@ dialog::backdrop {
                           <input type="checkbox"  id="all" name="type" value="All" />
                           <span><strong>All work </strong></span>
                         </label>
-                      </div>
+                   
                     
                       <input type="submit" value="Submit">&nbsp;
                     </form>
@@ -610,30 +571,6 @@ dialog::backdrop {
                   </div>
 
 
-<!-- 
-                  <form id="filter-form" style="margin-bottom: 12px; z-index: 1000;">
-               
-                  
-                    <label>
-                      <input type="checkbox" id="full-closure" name="type" value="Full Highway Closure">
-                      <img src="full-closure-icon.png" width="30" height="30">
-                      Full Highway Closure
-                    </label><br>
-                
-                  
-                    <input type="submit" value="Submit">
-                  </form>
-                   -->
-                  <!-- <select id="location-select" style="line-height: 40px; height: 41px; margin-left: 14px">
-                    <option value="">--Location--</option>
-                    <option value="Location 1">Montlake</option>
-                    <option value="Location 2">Portage Bay</option>
-                    <option value="Location 3">Hunts Point</option>
-                    <option value="Location 4">Yarrow Point</option>
-                    <option value="Location 4">Evergreen Point Floating Bridge</option>
-            
-                  </select> -->
-                     <!-- <div class="orangeMap"> -->
                       <div id="map"></div>
                       </div>
 <!--     
@@ -1009,8 +946,7 @@ dialog::backdrop {
             "iconSize": "40",
             "startDate": "2023-05-10",
             "endDate": "2023-05-20",
-            "location": "Location 1",
-            "type": "Full Highway Closure"    
+                  "type": "Camera"    
           },
           {
             "coordinates": [47.636191, -122.229373],
@@ -1018,8 +954,7 @@ dialog::backdrop {
             "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangecone-md.png",
             "iconSize": "40",
             "startDate": "2023-05-15",
-            "endDate": "2023-05-25",
-            "location": "Location 2",   
+            "endDate": "2023-05-25",          
             "type": "Full Highway Closure"  
           },
     
@@ -1030,30 +965,29 @@ dialog::backdrop {
             "iconSize": "40",
             "startDate": "2023-05-07",
             "endDate": "2023-05-30",
-            "location": "Location 1", 
+            "type": "Camera"  
           },
           {
             "coordinates": [47.63662, -122.237921],
             "message": "<h2 style='font-size: 18px; font-weight: 600'>May 7 to June 30:</h2><p>Something about this.</p>",
-            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/orangecone-md.png",
+            "iconUrl": "/camera-green.png",
             "iconSize": "40",
             "startDate": "2023-05-07",
             "endDate": "2023-05-30",
-            "location": "Location 3",   
-            "type": "Full Highway Closure"   
+              "type": "Full Highway Closure"   
           },
     
     
-          {
-            "coordinates": [47.641807, -122.316945],
-            "message": "<h2 style='font-size: 18px; font-weight: 600'>May 25 to June 5:</h2><p>Construction, road remains open.</p>",
-            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/caution2.png",
-            "iconSize": "35",
-            "startDate": "2023-05-25",
-            "endDate": "2023-06-30",
-            "location": "Location 1",   
-            "type": "Full Highway Closure"   
-          },
+        //   {
+        //     "coordinates": [47.641807, -122.316945],
+        //     "message": "<h2 style='font-size: 18px; font-weight: 600'>May 25 to June 5:</h2><p>Construction, road remains open.</p>",
+        //     "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/caution2.png",
+        //     "iconSize": "35",
+        //     "startDate": "2023-05-25",
+        //     "endDate": "2023-06-30",
+        //     "location": "Location 1",   
+        //     "type": "Full Highway Closure"   
+        //   },
     
          
 
@@ -1065,7 +999,7 @@ dialog::backdrop {
             "startDate": "2023-05-22",
             "endDate": "2023-06-05",
             "location": "Location 5",   
-            "type": "Full Highway Closure"   
+            "type": "Partial Highway Closure"   
           },
 
           
@@ -1093,104 +1027,55 @@ dialog::backdrop {
           // Add more construction sites here
         ];
       
-      function createCustomIcon(iconUrl, size) {
-        return L.icon({
-            iconUrl: iconUrl,
-            iconSize: [size, size], // Size of the icon
-            iconAnchor: [12, 41], // Point of the icon which will correspond to the marker's location
-            popupAnchor: [0, -41], // Point from which the popup should open relative to the iconAnchor
-            className: 'my-custom-icon'
-          });
-      }
-      
-      // Initialize the Leaflet map
-      const map = L.map('map').setView([47.651151332237724, -122.24892667750544], 13);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-      }).addTo(map);
-      
-      // Loop through the data source and create markers with pop-up messages and custom icons
-      constructionSites.forEach(site => {
-        const customIcon = createCustomIcon(site.iconUrl, site.iconSize);
-        const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
-      
-        marker.bindPopup(site.message);
-      });
-    
-      const circle = L.circle([47.644915, -122.304155], {
-                    color: '#ed2e38',
-                    fillColor: '#ed2e38',
-                    fillOpacity: 0.3,
-                    radius: 500
-                  }).addTo(map).bindPopup('Road closed from DATE to DATE');
 
-                  // const polygon = L.polygon([
-                  //       [47.645526, -122.292938],
-                  //       [47.64356, -122.291737],
-                  //       [47.643213, -122.282467],
-                  
+// create a Leaflet map
+var map = L.map('map').setView([47.64131, -122.295796], 13);
 
-                  // ], {
-                  //   color: '#97d700',
-                  //   fillColor: '#97d700',
-                  //   fillOpacity: 0.3
-               
-                  // }).addTo(map).bindPopup('Construction, roads are open.');
-      const popup = L.popup()
-                        .setLatLng([47.645117, -122.298691])
-                        .setContent('This is a message about Union Bay.')
-                        .openOn(map);
-    
-                      function onMapClick(e) {
-                        popup
-                          .setLatLng(e.latlng)
-                          .setContent(`You clicked the map at ${e.latlng.toString()}`)
-                          .openOn(map);
-                      }
-    
-                      map.on('click', onMapClick);
-    
-    
-    
-    // Fetch form and input elements
-    const form = document.querySelector('#date-range-form');
-    const startDateInput = document.querySelector('#start-date-input');
-    const endDateInput = document.querySelector('#end-date-input');
-    
+// add an OpenStreetMap tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+}).addTo(map);
 
-    function clearMarkers() {
-      map.eachLayer(layer => {
-        if (layer instanceof L.Marker) {
-          map.removeLayer(layer);
-        }
-      });
-    }
-     
-    function addMarkers(startDate, endDate) {
-      constructionSites.forEach(site => {
-        if (site.startDate <= endDate && site.endDate >= startDate) {
-          const customIcon = createCustomIcon(site.iconUrl);
-          const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
-          marker.bindPopup(site.message);
-        }
-      });
-    }
-    
-    form.addEventListener('submit', event => {
-      event.preventDefault();
-          const startDate = startDateInput.value;
-      const endDate = endDateInput.value;
-    
-      if (startDate && endDate) {
-        clearMarkers();
-        addMarkers(startDate, endDate);
-      }
+document.getElementById('filter-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    var startDate = new Date(document.getElementById('start-date-input').value);
+    var endDate = new Date(document.getElementById('end-date-input').value);
+
+    // filter the construction sites by date and selected type
+    var filteredSites = constructionSites.filter(function(site) {
+        var siteStartDate = new Date(site.startDate);
+        var siteEndDate = new Date(site.endDate);
+
+        var typeChecked = document.getElementById(site.type.toLowerCase().replace(/\s/g, "-")).checked;
+        var allChecked = document.getElementById('all').checked;
+
+        return (siteStartDate <= endDate && siteEndDate >= startDate) && (typeChecked || allChecked);
     });
+
+    // clear all existing markers
+    map.eachLayer(function(layer){
+        if(layer instanceof L.Marker) map.removeLayer(layer);
+    });
+
+    // display the filtered sites on the map
+    filteredSites.forEach(function(site) {
+        var icon = L.icon({
+            iconUrl: site.iconUrl,
+            iconSize: [site.iconSize, site.iconSize]
+        });
+
+        L.marker(site.coordinates, {icon: icon})
+            .addTo(map)
+            .bindPopup(site.message);
+    });
+});
+
+
 
 
                     </script>
-  <!-- <script type="application/json"
-    data-drupal-selector="drupal-settings-json">{"path":{"baseUrl":"\/","scriptPath":null,"pathPrefix":"","currentPath":"node\/420","currentPathIsAdmin":false,"isFront":false,"currentLanguage":"en"},"pluralDelimiter":"\u0003","suppressDeprecationErrors":true,"responsive_menu":{"position":"right","theme":"theme-white","pagedim":"none","modifyViewport":true,"use_bootstrap":true,"breakpoint":"all and (max-width: 992px)","drag":false},"google_analytics":{"account":"UA-970887-21","trackOutbound":true,"trackMailto":true,"trackTel":true,"trackDownload":true,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip","trackColorbox":true},"data":{"extlink":{"extTarget":false,"extTargetAppendNewWindow":false,"extTargetNoOverride":false,"extNofollow":false,"extNoreferrer":true,"extFollowNoOverride":false,"extClass":"ext","extLabel":"(link is external)","extImgClass":false,"extSubdomains":false,"extExclude":"","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":false,"extAlertText":"This link will take you to an external web site. We are not responsible for their content.","mailtoClass":"0","mailtoLabel":"(link sends email)","extUseFontAwesome":true,"extIconPlacement":"append","extFaLinkClasses":"fa fa-external-link","extFaMailtoClasses":"fa fa-envelope-o","whitelistedDomains":["wsdot.com","test.wsdot.com","www.wsdot.com","ftp.wsdot.wa.gov","wave2go.wsdot.com","secureapps.wsdot.wa.gov","wsdot.maps.arcgis.com"]}},"ckeditorAccordion":{"accordionStyle":{"collapseAll":1,"keepRowsOpen":null}},"bootstrap":{"forms_has_error_value_toggle":0},"user":{"uid":0,"permissionsHash":"a046f1e7eca0b89bb6f0c6ba2f67d00bb506c281b5cc0f2d1f019c9fcb1c530b"}}</script> -->
+
   <script src="/Scripts/script1.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
     integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
