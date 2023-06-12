@@ -544,37 +544,7 @@ dialog::backdrop {
                   </div>                    
                 </div>
               </div> 
-              <main id="main-content"> 
-              <div class="nav-outer-wrapper">
-                <div class="navbar navbar-default container" id="navbar" role="nav">            
-                  <div class="navbar-header">
-                    <div class="region region-navigation">          
-                      <div class="nav-tabs break-lg-control">
-                        <nav aria-describedby="block-mainnavigation-8-menu">
-                          <h2 class="sr-only menu-heading" id="block-mainnavigation-8-menu d-none">Main navigation</h2>
-                          <ul class="menu2 nav" id="nav2">
-                            <img src="img/sr520.png" style="float: left;" />
-                            <li>          
-                              <a href="#map">Construction Map</a>
-                            </li>
-                            <li>          
-                              <a href="/program.html">Program</a>
-                            </li>
-                            <li>          
-                              <a href="/construction-projects.html">Construction Projects</a>
-                            </li>
-                            <li>          
-                              <a href="/contact.html">Contact Us</a>
-                            </li>
-                            <li>          
-                              <a href="/about.html">Outreach & Events</a>
-                            </li>
-                          </ul>  
-                      </div>          
-                    </div>          
-                  </div>                    
-                </div>
-              </div>          
+              
           <!-- #### END NAV section ##### -->
      <div id="alert-banner-top" class="container-fluid">
       <div class="row">
@@ -1021,15 +991,15 @@ dialog::backdrop {
           },
 
           
-          // {
-          //   "coordinates": [47.640933, -122.217385],
-          //   "message": "<h2 style='font-size: 18px; font-weight: 600'>May 1 - June 5: Off-Ramp Closed</h2><p>Construction, expect traffic delays from 7AM to 3PM",
-          //   "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/roadclose-3.png",
-          //   "iconSize": "75",
-          //   "startDate": "2023-05-01",
-          //   "endDate": "2023-06-05",
-          //   "location": "Location 4" 
-          // },
+          {
+            "coordinates": [47.640933, -122.217385],
+            "message": "<h2 style='font-size: 18px; font-weight: 600'>May 1 - June 5: Off-Ramp Closed</h2><p>Construction, expect traffic delays from 7AM to 3PM",
+            "iconUrl": "https://sr520-beta2023.azurewebsites.net/Content/icons/roadclose-3.png",
+            "iconSize": "75",
+            "startDate": "2023-05-01",
+            "endDate": "2023-06-05",
+            "location": "Location 4" 
+          },
 
           {
             "coordinates": [47.643311, -122.279974],
@@ -1038,8 +1008,7 @@ dialog::backdrop {
             "iconSize": "30",
             "startDate": "2023-05-25",
             "endDate": "2023-06-30",
-            "location": "Location 1",   
-            "type": "Partial Highway Closure"   
+               "type": "Partial Highway Closure"   
           }
     
           // Add more construction sites here
@@ -1139,15 +1108,15 @@ dialog::backdrop {
   });
 }
 
-    // function addMarkers(startDate, endDate) {
-    //   constructionSites.forEach(site => {
-    //     if (site.startDate <= endDate && site.endDate >= startDate) {
-    //       const customIcon = createCustomIcon(site.iconUrl);
-    //       const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
-    //       marker.bindPopup(site.message);
-    //     }
-    //   });
-    // }
+    function addMarkers(startDate, endDate) {
+      constructionSites.forEach(site => {
+        if (site.startDate <= endDate && site.endDate >= startDate) {
+          const customIcon = createCustomIcon(site.iconUrl);
+          const marker = L.marker(site.coordinates, { icon: customIcon }).addTo(map);
+          marker.bindPopup(site.message);
+        }
+      });
+    }
     
     form.addEventListener('submit', event => {
       event.preventDefault();
