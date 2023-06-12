@@ -1,4 +1,44 @@
-h1 {
-margin: 6rem 0rem;
+
+:root {
+    --primary-color: #257B5F;
 }
 
+#contact-main h1 {
+margin: 6rem 0rem;
+color: var(--primary-color)
+}
+
+.col-left {
+    padding: 0 4rem 0 6rem;
+}
+#main-contact p {
+    font-size: .9em;
+    line-height: 1.2;
+}
+
+.contact-h3 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.li-lead {
+    font-weight: 600;
+}
+
+form .btn-custom,
+.btn-custom {
+    text-align: center;
+    margin-left: 2rem;
+}
+.contact-list {
+    list-style: none;
+}
+.contact-article > div{
+    margin: auto 2rem;
+}
+.contact-list li:not(:last-child) {
+    margin-bottom: 1rem;
+}
+.social-media-list i {
+    margin-right: 1rem;
+}
