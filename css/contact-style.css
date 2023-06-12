@@ -15,7 +15,7 @@ color: var(--primary-color)
     font-size: 1em;
     line-height: 1.2;
 }
-#contact-main .container-fluid {
+.container-fluid {
     max-width: 1200px;
 }
 
