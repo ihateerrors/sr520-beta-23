@@ -1,3 +1,9 @@
+body {
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
 .btn.search-form__submit {
 
     background: #97d700;
