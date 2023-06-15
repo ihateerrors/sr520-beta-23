@@ -32,7 +32,6 @@
     integrity="sha512-tGFFYdzcicBwsd5EPO92iUIytu9UkQR3tLMbORL9sfi/WswiHkA1O3ri9yHW+5dXk18Rd+pluMeDBrPKSwNCvw=="
     crossorigin="anonymous" />
   <link rel="stylesheet" media="all" href="/css/styles2.css" />
-  <link rel="stylesheet" media="all" href="/css/stylesheet-override.css" />
   <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" />
   <link rel="stylesheet" media="all" href="/css/styles3.css" />
   <link rel="stylesheet" media="all"
@@ -86,6 +85,309 @@
       window.attachEvent("onload", $buo_f);
     }
   </script>
+
+  <style>
+    .btn.search-form__submit {
+
+      background: #97d700;
+      border-bottom: 1px solid #6699ee;
+      border-bottom-right-radius: 4px;
+      border-left: 1px solid #77aaff;
+      border-radius: 0px 4px 4px 0px;
+      border-right: 1px solid #6699ee;
+      border-top: 1px solid #99ccff;
+      border-top-right-radius: 4px;
+      color: #333333;
+      cursor: pointer;
+      font-family: "Arial Unicode MS", Arial, sans-serif;
+      font-size: 14px;
+      line-height: 1.42857;
+      margin: 0px;
+      margin-left: -5px;
+      padding: 2.5px 12px;
+      text-decoration: none;
+    }
+
+    .btn.search-form__submit:active {
+      border: 1px inset #cccccc;
+    }
+
+    .btn.search-form__submit:hover {
+      border-color: rgb(153, 204, 255) rgb(102, 153, 238) rgb(102, 153, 238) rgb(119, 170, 255);
+    }
+
+    .btn.search-form__submit::before {
+      color: #1d252d;
+      content: "";
+      font-family: "Font Awesome";
+      font-size: 1.4em;
+    }
+
+    .container-pgram {
+      display: inline-flex;
+      align-items: left;
+      text-decoration: none;
+      justify-content: space-around;
+      /* height: 100vh; */
+      /* margin: 10px 20px; */
+      padding: 2px;
+    }
+
+    .parallelogram-link {
+      display: inline-block;
+      background-color: #007b5f;
+      /* background-color: #2b542c; */
+      text-align: center;
+      color: white !important;
+      font-size: 20px;
+      text-decoration: none;
+      margin-top: 12px;
+      padding: 12px 24px;
+      border-radius: 5px;
+      position: relative;
+      transform: skewX(-10deg);
+      transition: all 0.3s;
+    }
+
+    .parallelogram-link::before {
+      content: "";
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+      background-color: inherit;
+      z-index: -1;
+      transform: skewX(-10deg);
+    }
+
+    .parallelogram-link:hover {
+      background-color: #1d3b1e;
+      color: #fff;
+    }
+
+    .leaflet-popup-content-wrapper {
+      background: white;
+      border-radius: 12px;
+      box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 14px;
+
+      box-sizing: unset;
+      color: #333333;
+      font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      line-height: 16.25px;
+      padding: 1px;
+      text-align: left;
+    }
+
+    .leaflet-popup-content {
+        word-wrap: break-word;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+
+ .container3  {
+  display: flex;
+       flex-direction: row;
+  color: #fff;
+  font-weight: 500;
+  align-items: center;
+  /* justify-content: center;
+margin-top: 12px;  */
+/* padding-left: 14px; 
+padding-right: 14px; */
+text-decoration: none !important;
+float: right;
+ }
+
+ .container4 {
+  padding-left: 5%; padding-right: 5%; margin-top: 20px; margin-bottom: 20px;
+ }
+.ext a {
+  color: #fff !important;
+  font-weight: 500;
+  text-decoration: none;
+}
+ .topnav2  {
+  display: flex;
+       flex-direction: row;
+  color: #fff;
+float: left;
+  /* justify-content: space-around; */
+margin-top: 25px; 
+padding-left: 14px; 
+padding-right: 14px;
+text-decoration: none !important;
+list-style-type: none !important;
+font-weight: 600;
+ }
+ .topnav2 a {
+  text-decoration: none;
+  font-weight: 500;
+ }
+
+ .nodec a {
+  text-decoration: none !important;
+  color: #fff;  
+  font-weight: 500;
+ }
+
+ .nodec a:visited {
+  color: #efefef;
+
+ }
+ .nodec a:hover {
+  color: #99ccff;
+ }
+
+ .d-none {
+  display: none !important;
+ }
+ .fa.fa-external-link {
+  display: none !important;
+ }
+
+ .menu2 {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu2 li a {
+  text-decoration: none;
+  position: relative;
+}
+
+.menu2 li a::before {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-bottom: 12px solid #FF6A13;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.menu2 li a:hover::before {
+  opacity: 1;
+}
+
+#nav2 li a {
+  font-size: 1.28em;
+  line-height: 1.29em;
+  margin-bottom: none;
+  padding-bottom: 3px !important;
+}
+
+/* #map, #map2 {
+  background-color:  #ffffff;
+border-bottom: 5px solid  #97d700;
+border-left: 1px solid  #97d700;
+border-radius: 4px;
+border-right: 1px solid  #97d700;
+border-top: 1px solid  #97d700;
+box-shadow:  rgba(29, 37, 45, 0.15) 0px 1px 1px 1px;
+box-sizing: border-box;
+color:  #333333;
+font-family: Lato, sans-serif;
+font-size: 15px;
+height: fit-content;
+line-height: 24px;
+margin-bottom: 16px;
+min-height: 600px;
+padding: 24px;
+}
+
+#map:hover {
+  border-color: rgb(151, 215, 0);
+border-style: solid;
+border-width: 1px 1px 5px;
+}
+#map2:hover {
+  border-color: rgb(151, 215, 0);
+border-style: solid;
+border-width: 1px 1px 5px;
+} */
+
+.wdot-dkgreen {color:#007b5f;}
+
+.mapcontainer {
+  background-color:  #ffffff;
+border-bottom: 5px solid  #97d700;
+border-left: 1px solid  #97d700;
+border-radius: 4px;
+border-right: 1px solid  #97d700;
+border-top: 1px solid  #97d700;
+box-shadow:  rgba(29, 37, 45, 0.15) 0px 1px 1px 1px;
+box-sizing: border-box;
+color:  #333333;
+font-family: Lato, sans-serif;
+font-size: 15px;
+height: fit-content;
+line-height: 24px;
+margin-bottom: 16px;
+min-height: 600px;
+padding: 24px;
+}
+
+.mapcontainer:hover {
+  border-color: rgb(151, 215, 0);
+border-style: solid;
+border-width: 1px 1px 5px;
+}
+
+.map2 {
+  background-color:  #ffffff;
+border-bottom: 5px solid  #97d700;
+border-left: 1px solid  #97d700;
+border-radius: 4px;
+border-right: 1px solid  #97d700;
+border-top: 1px solid  #97d700;
+box-shadow:  rgba(29, 37, 45, 0.15) 0px 1px 1px 1px;
+box-sizing: border-box;
+color:  #333333;
+font-family: Lato, sans-serif;
+font-size: 15px;
+height: fit-content;
+line-height: 24px;
+margin-bottom: 16px;
+min-height: 600px;
+padding: 24px;
+}
+#map2:hover {
+  border-color: rgb(151, 215, 0);
+border-style: solid;
+border-width: 1px 1px 5px;
+}
+@media (width <= 700px) {
+        .container3 {
+          display: none;
+        }
+}
+
+dialog {
+  z-index: 10;
+  margin-top: 10px;
+  background: green;
+  border: none;
+  border-radius: 1rem;
+}
+dialog::backdrop {
+  background-color: hsl(250, 100%, 50%, 0.25);
+}
+
+.alerthead {
+  font-size: 1.4em; padding: 1em; font-size: 600;
+}
+  </style>
 
   <script>
     $(document).ready(function () {
@@ -186,117 +488,48 @@
           <!-- #### END NAV section ##### -->
           <!-- #### START Main section ##### -->
        <main>
-          <div>
-            <div>
-              <div class="container-fluid container4" style="padding-left: 5%; padding-right: 5%; margin-top: 20px; margin-bottom: 20px;">
+          <div class="containe4">
+            <div class="container4" style="padding-left: 5%; padding-right: 5%; margin-top: 20px; margin-bottom: 20px;">
+              <div class="container-fluid">
                 <div class="row">
-                  <h1 class="wdot-dkgreen">Montlake Project</h1>
-                    <div>
-                        <img src="https://placehold.co/1200x600" alt="">
-                    </div>
+                  <h1 class="wdot-dkgreen">SR 520 Bridge Replacement and HOV Program</h1>
                 </div>
               </div>
-              <div class="">
+              <div class="container-fluid">
                 <div class="row">
                   <div class="col-lg-9 col-sm-12">
-                    <div class="container4 container-fluid">
-                      <p>The Montlake Project will improve transportaon for both motorized and nonmotorized
-                          travel along the corridor with a new SR 520 eastbound bridge over Union Bay. This project
-                          also builds a new, three-acre lid covering the highway in Montlake that will include regional
-                          transit stops and open green space. East of the lid, a bicycle and pedestrian bridge will be
-                          constructed over SR 520.</p>
-                      <p><strong>For more information about the program, visit our official SR 520 webpage.</strong></p>
-                      <div class="togglerow" style="justify-content: space-between;"> 
-                        <button id="map1Button" class="btn primary parallelogram-link">Montlake Project webpage</button>
-                      </div>
-                    </div>
-                    <div style="background-color: #e8faf6; padding-left: 2em;">
-                      <div class="container-fluid">
-                        <h2 class=""><u>Project materials</u></h2>
-                        <div>
-                          <img src="/img/cone.png" alt="cone">
-                          <span>Community Construction Management Plan</span>
-                          <p>Check out the [Montlake Project] Community Construction Management Plan (CCMP), which
-                            describes what neighbors can expect during construction, what construction best pracces the
-                            contractor will follow, and how the contractor will avoid or reduce construction effects on
-                            neighborhood residences and historic properes. The CCMP gets updated throughout the project
-                            duraon based on construction acvies and public feedback.</p>
-                        </div>
-                        <div>
-                          <img src="/img/enviromental.png" alt="enviromental">
-                          <span>Environmental</span>
-                          <p>View the [Montlake Project Tree and Vegetaon Management and Protecon Plan (TVMPP)] to
-                            learn about project-specific best management pracces to preserve, protect and avoid effecng
-                            trees and vegetaon within the project construcon area. The plan idenfies way to minimize
-                            effects on trees and vegetaon during construcon and establishes an implementaon plan to
-                            ensure best pracces are followed.</p>
-                        </div>
-                        <div>
-                          <img src="/img/noise.png" alt="noise">
-                          <span>Noise</span>
-                          <p>We are commied to following noise regulaons and using best pracces to reduce noise. Dayme
-                            construcon acvies observe dayme noise limits set by the city of Seale. However, some
-                            construcon acvies occur at night due to safety and traffic concerns. The Major Public Project
-                            Noise Variance (MMPCNV) is granted by the city of Seale sets limits for the allowable level of
-                            nighme noise. Read the Montlake Project’s MPPCNV applicaon to learn about nighme noise
-                            limits and commitments.</p>
-                          <p>You can also view the Montlake Project’s weekly noise monitoring report (updated weekly) and the
-                            2022 annual report.</p>
-                        </div>
-                        <div class="">
-                          <img src="/img/traffic.png" alt="traffic">
-                          <span>Traffic</span>
-                          <p>Read the [Montlake Project Neighborhood Traffic Management Plan (NTMP)] outlining planned
-                            traffic management measures (both temporary and permanent) within the project construcon
-                            area. The NTMP also describes some of the best management pracces that will be used during
-                            construcon to help reduce local traffic effects related to project construcon.</p>
-                        </div>
-                        <div>
-                          <img src="/img/vibration.png" alt="vibration">
-                          <span>Vibration</span>
-                          <p>Our project contractors must submit and follow a vibraon monitoring plan (VMP). See the
-                            Montlake Project’s VMP, which idenfies how construcon acvies will be carried out to
-                            stay within the contract’s vibraon limits. The plan also shows the locaons of the digital
-                            vibraon monitors.
-                          </p>
-                        </div>
-                        <div>
-                          <img src="/img/other.png" alt="other">
-                          <span>Other</span>
-                          <p>We strive to the keep the public informed about our project construcon acvies and effects.
-                            We do this through regular public meengs, neighborhood FAQs, community events, and digital
-                            communicaons.
-                          </p>
-                        </div>
-                        <p><a href="#">View the Montlake Project’s March monthly construction meeting.</a></p>
-                        <p><a href="#">View the Montlake Project’s Construction Effects  FAQ document.</a></p>
-                      </div>
+                    <img src="https://placehold.co/1200x600" alt="">
+                    <p>The SR 520 Bridge Replacement and HOV Program enhances travel safety suband mobility with modern, structurally stronger bridges, as well as substantial transit and roadway improvements along this urban corridor. Built in stages, the improvements extend from I-405 in Bellevue to I-5 in Seattle.</p>
+                    <p><strong>For more information about the program, visit our official SR 520 webpage.</strong></p>
+                    <div class="togglerow" style="justify-content: space-between;"> 
+                      <button id="map1Button" class="btn primary parallelogram-link">SR 520 webpage</button>
                     </div>
                   </div>
                   <div class="col-lg-3 col-md-3 col-sm-12">
-                    <div class="container4 container-fluid">
-                      <div  style="margin-bottom: 1em;">
-                        <div>                                                                                             
-                          <a class="twitter-timeline" data-height="600" href="https://twitter.com/wsdot_520?ref_src=twsrc%5Etfw">Tweets by wsdot_520</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        </div>      
+                    <div class="card">
+                      <div class="card-body">                                                                                             
+                        <a class="twitter-timeline" data-height="600" href="https://twitter.com/wsdot_520?ref_src=twsrc%5Etfw">Tweets by wsdot_520</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>     
+                        <div class="card-text center" style="margin-top: 18px;"> 
+                          <a href="https://twitter.com/wsdot_520" class="btn btn-primary"><span class="fab fa-twitter">&nbsp;&nbsp;</span>Follow us</a>
+                        </div>
+                      </div>      
+                    </div>
+                    <div class="card">
+                      <div class="card-body border">
+                        <img src="https://placehold.co/600x400" alt="">
                       </div>
-                      <div class="card">
-                        <div class="card-body border">
-                          <img src="https://placehold.co/600x400" alt="">
-                        </div>
-                        <div class="card-text center">
-                          <p>View up-to-date travel conditions including travel alerts, cameras, route times, road and bridge restriction, and weather alerts.</p>
-                          <button id="map1Button" class="btn primary parallelogram-link">WSDOT Real-time travel map</button>
-                        </div>
+                      <div class="card-text center">
+                        <p>View up-to-date travel conditions including travel alerts, cameras, route times, road and bridge restriction, and weather alerts.</p>
+                        <button id="map1Button" class="btn primary parallelogram-link">WSDOT Real-time travel map</button>
                       </div>
-                      <div class="card">
-                        <div class="card-body border">
-                          <img src="https://placehold.co/600x400" alt="">
-                        </div>
-                        <div class="card-text center">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa consequuntur soluta adipisci velit culpa? Placeat voluptates, assumenda qui porro aliquam, officiis</p>
-                          <button id="map1Button" class="btn primary parallelogram-link">Live construction cams</button>
-                        </div>
+                    </div>
+                    <div class="card">
+                      <div class="card-body border">
+                        <img src="https://placehold.co/600x400" alt="">
+                      </div>
+                      <div class="card-text center">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa consequuntur soluta adipisci velit culpa? Placeat voluptates, assumenda qui porro aliquam, officiis totam atque eveniet deleniti fugit earum laudantium at! Sunt.</p>
+                        <button id="map1Button" class="btn primary parallelogram-link">Live construction cams</button>
                       </div>
                     </div>           
                   </div>
