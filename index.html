@@ -69,69 +69,13 @@
   <script src="/Scripts/map.chunk.js"> </script>
   <script src="/Scripts/real-time-map.js" > </script>
 
-  <script>
-    var $buoop = {c: 2};
-    function $buo_f() {
-      var e = document.createElement("script");
-      e.src = "//browser-update.org/update.min.js";
-      document.body.appendChild(e);
-    };
-    try {
-      document.addEventListener("DOMContentLoaded", $buo_f, false);
-    }
-    catch (e) {
-      window.attachEvent("onload", $buo_f);
-    }
-  </script>
-
-
-
-  <script>
-    $(document).ready(function () {
-      $(".dateFilter").datepicker(
-        {showOn: "both", buttonImage: "/images/calendar.gif", buttonImageOnly: true}
-      );
-      showPlaces();
-    });
-
-    function updateForm() {
-      clearMap();
-      showPlaces();
-    }
-
-    function clickAll() {
-      $("input[name='typeId']").removeAttr("checked");
-      updateForm();
-    }
-
-    function clickOne() {
-      var anyChecked = false;
-      var boxes = $("input[name='typeId']");
-      $.each(boxes, function (i, box) {
-        if (box.checked) {
-          anyChecked = true;
-        }
-      });
-
-      if (anyChecked) {
-        $("#anyBox").removeAttr("checked");
-      } else {
-        $("#anyBox").attr("checked", "checked");
-      }
-      updateForm();
-    }
- 
-
-  </script>
 
 </head>
 
-<!-- <body
-  class="major-projects-landing has-glyphicons"> -->
   <body>
-  <a href="#main-content" class="visually-hidden focusable skip-link">
+  <!-- <a href="#main-content" class="visually-hidden focusable skip-link">
     Skip to main content
-  </a>    
+  </a>     -->
              <header id="header">
                 <div class="header-wrapper">
                   <div class="logo-container">
@@ -158,8 +102,8 @@
                   <div class="navbar-header">
                     <div class="region region-navigation">          
                       <div class="nav-tabs break-lg-control">
-                        <nav aria-describedby="block-mainnavigation-8-menu">
-                          <h2 class="sr-only menu-heading" id="block-mainnavigation-8-menu d-none">Main navigation</h2>
+                        <nav -describedby="block-mainnavigation-8-menu">
+                          <h2 class="sariar-only menu-heading" id="block-mainnavigation-8-menu d-none"></h2>
                           <ul class="menu2 nav" id="nav2"
                             style="padding-top: 2.5em; margin-bottom: 2em; margin-left: 25px; padding-left: 25px;">
                             <img src="img/sr520.png" style="float: left;" />
@@ -219,45 +163,14 @@
               
                   <!-- <div class="mapcontainer"> -->
                   <div id="map1" class="d-block mapcontainer">
-                    <p class="mt-5" style="font-weight: 400; line-height: 40px;">Want to know what SR 520 construction activities are underway or coming soon? Search by date or and click on the icons on the map below for more details.</p>
+
+                    <iframe src="https://sr520-map.azurewebsites.net/" width="100%" height="600px"></iframe>   
+                      
+                    <!-- <p class="mt-5" style="font-weight: 400; line-height: 40px;">Want to know what SR 520 construction activities are underway or coming soon? Search by date or and click on the icons on the map below for more details.</p>
                     <div style="display: inline-flex; flex-direction: row;"> 
-                    <form id="filter-form" style="margin-bottom: 12px; z-index: 1000;">
-                      <label for="start-date-input">Start Date:</label>
-                      <input type="date" id="start-date-input" name="start-date-input">&nbsp;&nbsp;&nbsp;&nbsp;
-                                  <label for="end-date-input">End Date:</label>
-                      <input type="date" id="end-date-input" name="end-date-input">
-                      <div class="options-container">
-                        <label for="full-closure">
-                          <input type="checkbox" id="full-closure" class="slider-checkbox" name="type" value="Full Highway Closure" />
-                          <img src="/Content/icons/red-dash.png"  width="25" height="25" />
-                          Full highway closures
-                        </label>      
-                        <label for="partial-closure">
-                          <input type="checkbox" id="partial-closure" class="slider-checkbox" name="type" value="Full Highway Closure" />
-                          <img src="/Content/icons/red-dash.png"  width="25" height="25"/>
-                         Partial highway closures
-                        </label>                        
-                        <label for="high-impact">
-                          <input type="checkbox" id="high-impact" class="slider-checkbox" name="type" value="High Impact Construction"/>
-                          <img src="/Content/icons/orangecone-md.png"  width="30" height="30"/>
-                          High impact construction
-                        </label>      
-                        <label for="camera-yes">
-                          <input type="checkbox" id="camera-yes" class="slider-checkbox" name="type" value="Camera"  />
-                          <img src="/Content/icons/camera-green.png" width="25" height="25" />
-                         Cameras
-                        </label>  
-      
-                        <label for="all">
-                          <input type="checkbox" class="slider-checkbox" id="all" name="type" value="All" />
-                          <span><strong>All work </strong></span>
-                        </label>            
-                    
-                      <input type="submit" value="Submit">&nbsp;
-                      </div>
-                    </form>               
+                 
                   </div>
-                      <div id="map"></div>
+                      <div id="map"></div> -->
                       </div>
 
               <!-- iframe Map -->
