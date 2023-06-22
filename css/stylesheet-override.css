@@ -887,3 +887,6 @@ font-size: 1.4em; padding: 1em; font-size: 600;
 .card {
   border-radius: 15px;
 }
+
+.hero-image {
+  border-radius: 5px;}
