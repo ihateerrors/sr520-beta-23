@@ -555,6 +555,13 @@ footer {
     max-height: 500px; /* Fixed height */
     margin-bottom: 20px; /* Adjust as needed */
 }
+.card-montlake {
+  background: white;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Adjust as desired */
+
+  margin-bottom: 20px; /* Adjust as needed */
+  border-radius: 15px;
+}
 
 .btn.search-form__submit {
 
