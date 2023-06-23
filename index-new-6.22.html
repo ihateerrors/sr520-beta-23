@@ -24,10 +24,11 @@
   <link rel="stylesheet" media="all" href="/css/styles1.css" />
   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
     integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
-  <link rel="stylesheet" media="all"
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" media="all"
     href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.min.css"
     integrity="sha512-tGFFYdzcicBwsd5EPO92iUIytu9UkQR3tLMbORL9sfi/WswiHkA1O3ri9yHW+5dXk18Rd+pluMeDBrPKSwNCvw=="
-    crossorigin="anonymous" />
+    crossorigin="anonymous" /> -->
   <link rel="stylesheet" media="all" href="/css/styles2.css" />
   <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" />
   <link rel="stylesheet" media="all" href="/css/styles3.css" />
@@ -46,9 +47,9 @@
     href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" />
 
   <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css" /> -->
-  <link rel="stylesheet" media="all"
+  <!-- <link rel="stylesheet" media="all"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
-  <script src="/Scripts/jquery-min.js"></script>
+  <script src="/Scripts/jquery-min.js"></script> -->
   <!-- <script src="https://use.fontawesome.com/ee1c3da296.js"></script> -->
   <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
   <script src="https://kit.fontawesome.com/da8d22a218.js" crossorigin="anonymous"></script>
@@ -69,66 +70,107 @@
   <script src="/Scripts/map.chunk.js"> </script>
   <script src="/Scripts/real-time-map.js" > </script>
 
-
+<style>
+ .navbar a {
+  text-decoration: none !important;
+ }
+</style>
 </head>
 
   <body>
 
-    <header id="header">
+    <header id="header"  style="width: 100vw;">
      <div class="container header-container">
        <div class="row">
+        <div class="col-md-4"> 
           <div class="headerflex">
 
          
               <a class="logo" href="https://wsdot.wa.gov/" title="Home" rel="home" rel="noreferrer">
                  <img src="/img/wsdot-logo-white.svg" alt="Home" loading="lazy" style="float: left; position: sticky; text-decoration: none;" /> </a>
             </div>
-
+          </div>
+          <div class="col-md-8"> 
             <div class="container3"> 
-              <ul class="topnav2">
+              <ul class="topnav2" style="float: right;">
                 <li class="nodec" style="font-weight: 600; font-size: 16px;"><a class="nodec" href="https://wsdot.wa.gov/construction-planning/major-projects/sr-520-bridge-replacement-and-hov-program/">SR 520 Program</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
                   <li class="nodec" style="font-weight: 600; font-size: 16px;"><a class="nodec" href="https://www.wsdot.wa.gov/news/">News</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>                             
                   <li class="nodec" style="font-weight: 600; font-size: 16px;"><a class="nodec" href="https://www.wsdot.wa.gov/goodtogo/">Good To Go!</a></li>
                    </ul>
                      </div>
+                     
+                   </div>
        </div>
 
      </div>
 
     </header>
+                <div class="navwrap mt-4"> 
+              <div class="container" style="z-index: 1100;"> 
+            <img class="navicon" src="img/sr520.png" style="padding-bottom: 12px; padding-left: 12px"/>
 
-
-                 <div class="nav-outer-wrapper">
-                  <div class="navbar navbar-default container" id="navbar" role="nav">            
-                   <div class="navbar-header" style="margin-left: 6%;">
-                         <div class="nav-tabs break-lg-control">
-                          <img src="img/sr520.png" style="float: left; padding-top: .75em"/>
-                            <ul class="menu2 nav" id="nav2"
-                            style="padding-top: 1.25em;margin-top: .5em; margin-left: 5px; padding-left: 25px;">
-                           
-                            <li>          
-                              <a href="#construction-map">Construction Map</a>
-                            </li>
-                            <li>          
-                              <a href="program.html">Program</a>
-                            </li>
-                            <li>          
-                              <a href="construction-projects.html">Construction Projects</a>
-                            </li>
-                            <li>          
-                              <a href="contact.html">Contact Us</a>
-                            </li>
-                            <li>          
-                              <a href="about.html">Outreach & Events</a>
-                            </li>
-                          </ul>  
-                      </div>          
-                   </div>                    
-                </div>
-              </div> 
+            <div class="navbar navbar navbar-expand-md navbar-light bg-none" style="background-color: transparent; float: center;" id="navbar" role="nav">            
+              <!-- <div class="navbar-header"> -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: 25px; background-color:  #97d700; color: #fff;" >
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          
+                       <ul class="menu2 nav" id="nav2">
+                      
+                       <li>          
+                         <a class="nav-rhombus" style="font-style: normal" href="#construction-map">Construction Map</a> 
+                       </li>
+                       <li>          
+                         <a class="nav-rhombus"href="program.html">Program</a>
+                       </li>
+                       <li>          
+                         <a class="nav-rhombus" href="construction-projects.html">Construction Projects</a>
+                       </li>
+                       <li>          
+                         <a class="nav-rhombus" href="contact.html">Contact Us</a>
+                       </li>
+                       <li>          
+                         <a class="nav-rhombus" href="about.html">Outreach & Events</a>
+                       </li>
+                     </ul>  
+                 </div>          
+              <!-- </div>                     -->
+           </div>
+            <!-- <div class="navbar navbar-expand-md navbar-light bg-none" style="text-decoration: none;">
               
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="float: right;">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                  <ul class="navbar-nav nav menu2" id="nav2" style="list-style-type: none;"></ul>
+                    <li class="nav-item">
+                      <a class="nav-link" style="text-decoration: none;" href="#construction-map">Construction Map</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="program.html">Program</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="construction-projects.html">Construction Projects</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="contact.html">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="about.html">Outreach & Events</a>
+                    </li>
+                  </ul>
+                </div>
+              </div> -->
+            </div>
+        </div>
+   
+   
+       <!-- </header> -->
+
+      
           <!-- #### END NAV section ##### -->
-     <div id="alert-banner-top" class="container-fluid">
+     <div id="alert-banner-top" class="container-fluid"  style="width: 100vw;">
       <div class="row">
       <div class="orange-banner" style="background-color: #ffb500; height: 7em; width: 100vw;">    
          <div class="container4 mt-4"> 
@@ -146,9 +188,11 @@
 
        <div class="container-fluid">
           <div class="row"> 
+            <div class="blockhead" style="display: block; margin-left: 3%;"> 
           <h1 class="wdot-dkgreen">SR 520 Construction Corner</h1>
           <p><strong>The go-to source for information on SR 520 construction and closures.</strong></p>
        <p></p>
+      </div>
           </div>
         </div>
         <div id="construction-map" class="container-fluid">
@@ -162,7 +206,7 @@
                   <!-- <div class="mapcontainer"> -->
                   <div id="map1" class="d-block mapcontainer">
 
-                    <iframe src="https://sr520-map.azurewebsites.net/" width="100%" height="600px"></iframe>   
+                    <iframe src="https://sr520-map.azurewebsites.net/" style="border: none; min-height: 655px; max-height: 660px; width: 100%;"></iframe>   
                       
                     <!-- <p class="mt-5" style="font-weight: 400; line-height: 40px;">Want to know what SR 520 construction activities are underway or coming soon? Search by date or and click on the icons on the map below for more details.</p>
                     <div style="display: inline-flex; flex-direction: row;"> 
@@ -182,43 +226,40 @@
            <p style="font-size: 18px; font-weight: 400;"><i>Note: This tool is presented for planning purposes only. Construction work is dependent on weather and other factors, and activities are subject to change.</i></p><br>         
               </div>   
               <!-- Right Sidebar -->
-              <div class="col-lg-3 col-md-3 col-sm-12">
+              <div class="col-lg-3 col-md-3 vanishing">
                   <!-- Card 1 -->
                   <p class="divider2" style="margin-top: 4em;"></p>
                   <div class="left2">
-                    <div class="icon-text-pair">
+                    <div class="icon-text-pair rhombus-2">
                       <img src="/Content/icons/red-exclaim.png" width="25px" height="25px">
                       <a href="#">Montlake Boulevard partial closure, June 17-19, 2023</a>
-                    </div><br><br>
-                    <div class="icon-text-pair">
+                    </div>
+                    <div class="icon-text-pair rhombus-2">
                       <img src="/Content/icons/neworange-icon.png" width="25px" height="25px">
                       <a href="https://sr520construction.com/activity/view/68310">Construction Sunday evenings in July, 6pm-11pm</a>
-                    </div><br><br>
-                    <div class="icon-text-pair">
+                    </div>
+                    <div class="icon-text-pair rhombus-2">
                       <img src="/Content/icons/neworange-icon.png" width="25px" height="25px">
                       <a href="https://sr520construction.com/activity/view/68310">Other construction alert</a>
-                    </div><br><br>
-                    <div class="icon-text-pair">
+                    </div>
+                    <div class="icon-text-pair rhombus-2">
                       <img src="/Content/icons/trail-closure.png" width="25px" height="25px">
                       <a href="#">520 Bridge Trail closed July 1-3, 2023</a>
-                    </div><br><br>
-                    <div class="icon-text-pair">
+                    </div>
+                    <div class="icon-text-pair rhombus-2">
                       <img src="/Content/icons/neworange-icon.png" width="25px" height="25px">
                       <a href="https://sr520construction.com/activity/view/68310">Montlake Boulevard on-ramp to eastbound SR 520 closed weeknights</a>
-                    </div><br><br>
-                    <div class="icon-text-pair">
+                    </div>
+                    <div class="icon-text-pair rhombus-2">
                       <img src="/Content/icons/red-dash.png" width="25px" height="25px">
                       <a href="https://sr520construction.com/activity/view/72918">Westbound SR 520 off-ramp to East Roanoke Street closed 5/30 - 6/17
                     </a>
-                    </div><br><br>
-                    <div class="icon-text-pair">
+                    </div>
+                    <div class="icon-text-pair rhombus-2">
                         <img src="/Content/icons/ramp-closure.png" width="25px" height="25px">
                         <a href="#">Portage Bay Ramp closure, Aug. 1-3, 2023</a>
-                      </div><br><br>
-                   
-
-                    <!-- Add more icon-text pairs as needed -->
-                  </div>
+                      </div><br>
+                </div>
                                 
                   </div>
              <!-- END Right Sidebar col -->
@@ -234,11 +275,11 @@
 
    <!-- #### START second row container ###### -->
    <div class="container">
-    <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding-top: 20px; padding-bottom: 20px;">
-     <div class="col-md-4">   
+    <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding-top: 20px; padding-bottom: 20px; ">
+     <div class="col-lg-4 col-md-6 col-sm-10" style="justify-content: space-between;">   
     <!-- Card 1 start  -->
-       <div class="card h-100 mb-3" style="height: 450px">
-        <div class="card-body" style="max-height: 400px">   <a class="twitter-timeline" data-height="400" href="https://twitter.com/wsdot_520?ref_src=twsrc%5Etfw">Tweets by wsdot_520</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>     
+       <div class="card h-100 mb-3" style="min-height: 450px">
+        <div class="card-body" style="min-height: 400px">   <a class="twitter-timeline" data-height="400" href="https://twitter.com/wsdot_520?ref_src=twsrc%5Etfw">Tweets by wsdot_520</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>     
            <div class="card-text center" style="margin-top: 10px;"> 
            <a href="https://twitter.com/wsdot_520" class="btn btn-primary parallelogram-link-sm"><span
              class="fab fa-twitter">&nbsp;&nbsp;</span>Follow us</a>
@@ -247,11 +288,11 @@
        </div> 
        <!-- Card 1end  -->
      </div>
- <div class="col-md-4 center">
+ <div class="col-md-4 col-lg-4 col-md-6 col-sm-10 center">
      <!-- Card 2 start  -->
-     <div class="card h-100">
+     <div class="card h-100" style="min-height: 450px">
        <div style="padding-top: -25px;">
-       <iframe src="https://public.earthcam.net/tJ90CoLmq7TzrY396Yd88B9B2qPMb6E316d3h59C-OM!/sr_520__-_montlake_project/camera_1/view_1" width="100%" height="400px"></iframe>
+       <iframe src="https://public.earthcam.net/tJ90CoLmq7TzrY396Yd88B9B2qPMb6E316d3h59C-OM!/sr_520__-_montlake_project/camera_1/view_1" width="100%"style="height: 400px; border-radius: 15px;"></iframe>
      </div><br>
        <div class="card-body">
              <a style="margin-top: -8px;" href="https://public.earthcam.net/tJ90CoLmq7TzrY396Yd88B9B2qPMb6E316d3h59C-OM!/sr_520__-_montlake_project/camera_1/view_1" class="btn btn-primary parallelogram-link-sm">Live construction cams</a>
@@ -260,25 +301,26 @@
 
      <!-- Card 2 end  -->
  </div>
- <div class="col-md-4 center">
+ <div class="col-lg-4 col-md-6 col-sm-10 center">
      
          <!-- Card 3start  -->
-         <div class="card h-100" style="height: 450px; font-size: 1em !important;">
-                     <div class="card-body ml-2 mr-2"  style="max-height: 400px;;"><br>
-                      <div class="pl-2 pr-2 ml-3 mr-3 mt-4">
-                      <h3 style="color: #007b5f;">Never miss a 520 Construction alert!</h3>
-                      <div class="containernew">
-                      <p style="margin-left: 25px; margin-right: 25px; margin-top: 14px;  font-size: 1em; line-height: 1.2em; text-align: left;">Join our email list to get all the latest news and updates.</p>
-                       <p style="margin-left: 25px; margin-right: 25px;  font-size: 1em; text-align: left; line-height: 1.3em;">To sign up, visit the WSDOT email updates page, enter your email address, and under "Construction, Planning & Projects," open "Projects," then select one or both of the following:</p>   
+         <div class="card h-100" style="min-height: 450px; width: 100%; font-size: 1em !important;">
+                     <div class="card-body ml-2 mr-2"><br>
+                      <div class="pl-1 pr-1 ml-3 mr-3">
+                      <h3 style="color: #007b5f;"><i class="fa-solid fa-at"></i> Join our email list!</h3>
+              
+                  <div class="containernew">
+                    <p style="margin-left: 15px; margin-right: 15px;  font-size: 1em; text-align: left; line-height: 1.3em; margin-top: 22px;">Get all the latest news, alerts, and updates on 520 Construction.</p>
+                       <p style="margin-left: 15px; margin-right: 15px;  font-size: 1em; text-align: left; line-height: 1.3em; margin-top: 15px;">To sign up, visit the WSDOT email updates page, enter your email address, and under "Construction, Planning & Projects," open "Projects," then select one or both of the following:</p>   
                         
                               <a href="#" target="_blank">SR 520 Bridge Replacement and HOV Program</a><br> <a href="#" target="_blank">SR 520 Rest of the West News </a>         
                 </div>
-          
-                <div class="card-body" style="float: bottom;">
-                 <a href="link_to_other_page_2" class="btn btn-primary parallelogram-link-sm">Sign up for email updates</a>
-                 </div>
+               
                  </div>
          </div>
+         <div style="float: bottom; padding-bottom: 24px;">
+          <a href="link_to_other_page_2" class="btn btn-primary parallelogram-link-sm">Sign up for email updates</a>
+          </div>
            <!-- Card 3 end  -->
        </div>     
     </div>
@@ -303,7 +345,7 @@
     <div class="container">
       <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap;">
         <div class="col-md-3">
-          <div class="logo-container" style="margin-bottom: 12px">
+          <div class="logo-container" style="margin-bottom: 12px; display: block; width: 267px; height: 43px; margin-right: 14px;">
             <img class="foot-logo" src="/Content/images/wsdot-logo-white.png" alt="WSDOT logo" width="267px" height="43px" />
           </div>
         </div>
@@ -316,7 +358,7 @@
    
           </ul>
      </div><div class="col-md-6">
-          <div class="social-row" style="padding-top: 12px;">
+          <div class="social-row" style="margin-top: 18px;">
     
               <a href="https://www.facebook.com/wsdot" class="social-link"><i class="fa-brands fa-facebook" style="text-decoration: none;"></i> </a>
              <a href="https://twitter.com/wsdot_520" class="social-link"><i class="fab fa-twitter"></i> </a>
@@ -337,13 +379,15 @@
     
 
   <script src="/Scripts/script1.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
-    integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+    integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script> -->
   <script src="/Scripts/script2.js"></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+  <!-- <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script> -->
   <script src="/Scripts/script3.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
   <script
     type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = {"beacon": "bam.nr-data.net", "licenseKey": "NRJS-a8107692ea83444c1a2", "applicationID": "858811128", "transactionName": "NVQHN0UEXhJUBkxQWgweJABDDF8PGiFKTEUDXTkNWAFVPXYKVk1HDV0JBkU5fg5RAG5QUBVyCg1DF18NWQBKFAsUWAAU", "queueTime": 0, "applicationTime": 477, "atts": "GRMEQQ0eTRw=", "errorBeacon": "bam.nr-data.net", "agent": ""}</script>
 
