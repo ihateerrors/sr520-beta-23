@@ -70,63 +70,10 @@
   <script src="/Scripts/map.chunk.js"> </script>
   <script src="/Scripts/real-time-map.js" > </script>
 
-<<<<<<< HEAD:montlake.html
-  <script>
-    var $buoop = {c: 2};
-    function $buo_f() {
-      var e = document.createElement("script");
-      e.src = "//browser-update.org/update.min.js";
-      document.body.appendChild(e);
-    };
-    try {
-      document.addEventListener("DOMContentLoaded", $buo_f, false);
-    }
-    catch (e) {
-      window.attachEvent("onload", $buo_f);
-    }
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      $(".dateFilter").datepicker(
-        {showOn: "both", buttonImage: "/images/calendar.gif", buttonImageOnly: true}
-      );
-      showPlaces();
-    });
-
-    function updateForm() {
-      clearMap();
-      showPlaces();
-    }
-
-    function clickAll() {
-      $("input[name='typeId']").removeAttr("checked");
-      updateForm();
-    }
-
-    function clickOne() {
-      var anyChecked = false;
-      var boxes = $("input[name='typeId']");
-      $.each(boxes, function (i, box) {
-        if (box.checked) {
-          anyChecked = true;
-        }
-      });
-
-      if (anyChecked) {
-        $("#anyBox").removeAttr("checked");
-      } else {
-        $("#anyBox").attr("checked", "checked");
-      }
-      updateForm();
-    }
-    </script>
-=======
 
 
 
 
->>>>>>> 6/22-al-changes:montlake-al22.html
 </head>
 
   <body>
