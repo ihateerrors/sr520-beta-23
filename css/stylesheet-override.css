@@ -1008,7 +1008,7 @@ font-size: 1.4em; padding: 1em; font-size: 600;
 }
 
 
-@media (max-width: 724px) {
+@media (max-width: 994px) {
 
   .left2 {
     /* display: inline-flex;
@@ -1024,4 +1024,5 @@ font-size: 1.4em; padding: 1em; font-size: 600;
   /* min-width: 350px; */
  margin: 12px;
  width: 100%;
+}
 }
