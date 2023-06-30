@@ -1101,6 +1101,12 @@ ul.dropdown-menu {
 .dropdown-menu li .nav-rhombus {
   padding: 0.8rem;
   color: var(--primary-color);
+  margin-bottom: 1rem;
+  transform: skewX(-5deg);
+
+}
+.dropdown-menu li .nav-rhombus:hover {
+  border-bottom: 2px solid transparent;
 }
 
 @media (max-width: 767px) {
