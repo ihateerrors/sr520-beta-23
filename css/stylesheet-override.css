@@ -640,7 +640,7 @@ footer {
 
 .rhombus-2  {
 
- background-color: #e0efec;
+ background-color: #fff;
   text-decoration: none !important;
   border: #97d700 2px solid;
   border-radius: 5px;
@@ -655,14 +655,14 @@ footer {
 }
 
 .rhombus-2:hover {
- background-color: #97d700;
+ background-color: rgb(151, 215, 0, .5);
  color: #ffff !important;
 }
 .rhombus-2 a {
   transform: skewX(10deg);
 }
 .rhombus-2 a:hover {
-  color: white;
+  color: #fff important;
 }
 
 .parallelogram-link::before {
@@ -937,11 +937,22 @@ font-size: 1.4em; padding: 1em; font-size: 600;
 .card {
   border-radius: 15px;
 }
-
+/* 
 .hero-image {
-  border-radius: 5px;}
 
+  max-height: 900px;
+  width: auto;
+  border-radius: 5px;
+  display: block;
+} */
 
+.heroimage {
+  /* min-height: 400px;
+  max-height: 900px;
+  width: auto; */
+  border-radius: 5px;
+
+}
 .headerflex {
   line-height: 24px;
   margin: .75em;
