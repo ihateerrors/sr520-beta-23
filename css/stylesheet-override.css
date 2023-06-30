@@ -1051,6 +1051,15 @@ font-size: 1.4em; padding: 1em; font-size: 600;
 }
 }
 
+.project-materials-heading-paddig {
+  padding-left: 10px;
+}
+@media screen and (max-width: 572px) {
+  .wdot-dkgreen {
+    padding-left: 20px;
+  }
+}
+
 footer .social-row a {
   border: none;
 }
