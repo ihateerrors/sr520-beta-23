@@ -644,10 +644,9 @@ footer {
 
 
 .rhombus-2  {
-
  background-color: #fff;
   text-decoration: none !important;
-  border: #97d700 2px solid;
+  border: #D9D9D9 2px solid;
   border-radius: 5px;
   position: relative;
   transform: skewX(-10deg);
@@ -661,13 +660,16 @@ footer {
 
 .rhombus-2:hover {
  background-color: rgb(151, 215, 0, .5);
+ border: #97D700 2px solid;
  color: #ffff !important;
 }
 .rhombus-2 a {
   transform: skewX(10deg);
+  text-decoration: none !important;
 }
 .rhombus-2 a:hover {
-  color: #fff important;
+  color: #005151 important;
+  text-decoration: underline;
 }
 
 .parallelogram-link::before {
