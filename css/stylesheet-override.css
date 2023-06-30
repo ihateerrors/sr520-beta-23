@@ -248,7 +248,6 @@ opacity: 1;
 font-size: 1.28em;
 line-height: 1.29em;
 margin-bottom: none;
-padding-bottom: 3px !important;
 }
 
 /* ### slider new start */
@@ -783,7 +782,6 @@ opacity: 1;
 font-size: 1.28em;
 line-height: 1.29em;
 margin-bottom: none;
-padding-bottom: 3px !important;
 }
 
 /* ### slider new start */
@@ -906,7 +904,7 @@ border-color: rgb(151, 215, 0);
 border-style: solid;
 border-width: 1px 1px 5px;
 }
-@media (width <= 700px) {
+@media (max-width: 768px) {
     .container3 {
       display: none;
     }

@@ -74,13 +74,48 @@
  .navbar a {
   text-decoration: none !important;
  }
+ .header-container,
+ .nav-container {
+  padding-left: 5%; 
+  padding-right: 5%; 
+  margin: 0;
+ }
+ .navwrap {
+  width: 100%;
+  margin-top: 1.5rem;
+ }
+ #nav2 {
+  padding-top: .8rem;
+  justify-content: flex-start;
+
+
+ }
+ .navbar-toggler {
+  
+ }
+ #navbar {
+  justify-content: flex-end;
+  padding-right: 5%;
+ }
+
+ @media (max-width: 767px) {
+  .navwrap {
+    margin-top: 0;
+  }
+
+  #nav2 {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+ }
 </style>
 </head>
 
   <body>
 
     <header id="header"  style="width: 100vw;">
-     <div class="container header-container">
+     <div class="container-fluid header-container ">
        <div class="row">
         <div class="col-md-4"> 
           <div class="headerflex">
@@ -105,65 +140,43 @@
      </div>
 
     </header>
-                <div class="navwrap mt-4"> 
-              <div class="container" style="z-index: 1100;"> 
-            <img class="navicon" src="img/sr520.png" style="padding-bottom: 12px; padding-left: 12px"/>
+    <div class="navwrap"> 
+  <div class="container-fluid nav-container" style="z-index: 1100; width: 100%;"> 
+<img class="navicon" src="img/sr520.png" style="padding-bottom: 12px; padding-left: 12px"/>
 
-            <div class="navbar navbar navbar-expand-md navbar-light bg-none" style="background-color: transparent; float: center;" id="navbar" role="nav">            
-              <!-- <div class="navbar-header"> -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: 25px; background-color:  #97d700; color: #fff;" >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+<div class="navbar navbar navbar-expand-md navbar-light bg-none" style="background-color: transparent; float: center;" id="navbar" role="nav">            
+  <!-- <div class="navbar-header"> -->
+    <button class="navbar-toggler" type="button" 
+    data-toggle="collapse" data-target="#navbarNavDropdown" 
+    aria-controls="navbarNavDropdown" aria-expanded="false" 
+    aria-label="Toggle navigation" style="margin-top: 25px; background-color:  #97d700; color: #fff;" >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+
+           <ul class="menu2 nav" id="nav2">
           
-                       <ul class="menu2 nav" id="nav2">
-                      
-                       <li>          
-                         <a class="nav-rhombus" style="font-style: normal" href="#construction-map">Construction Map</a> 
-                       </li>
-                       <li>          
-                         <a class="nav-rhombus"href="program.html">Program</a>
-                       </li>
-                       <li>          
-                         <a class="nav-rhombus" href="construction-projects.html">Construction Projects</a>
-                       </li>
-                       <li>          
-                         <a class="nav-rhombus" href="contact.html">Contact Us</a>
-                       </li>
-                       <li>          
-                         <a class="nav-rhombus" href="about.html">Outreach & Events</a>
-                       </li>
-                     </ul>  
-                 </div>          
-              <!-- </div>                     -->
-           </div>
-            <!-- <div class="navbar navbar-expand-md navbar-light bg-none" style="text-decoration: none;">
-              
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="float: right;">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul class="navbar-nav nav menu2" id="nav2" style="list-style-type: none;"></ul>
-                    <li class="nav-item">
-                      <a class="nav-link" style="text-decoration: none;" href="#construction-map">Construction Map</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="program.html">Program</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="construction-projects.html">Construction Projects</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="about.html">Outreach & Events</a>
-                    </li>
-                  </ul>
-                </div>
-              </div> -->
-            </div>
-        </div>
+           <li>          
+             <a class="nav-rhombus" style="font-style: normal" href="#construction-map">Construction Map</a> 
+           </li>
+           <li>          
+             <a class="nav-rhombus"href="program.html">Program</a>
+           </li>
+           <li>          
+             <a class="nav-rhombus" href="construction-projects.html">Construction Projects</a>
+           </li>
+           <li>          
+             <a class="nav-rhombus" href="contact.html">Contact Us</a>
+           </li>
+           <li>          
+             <a class="nav-rhombus" href="about.html">Outreach & Events</a>
+           </li>
+         </ul>  
+     </div>          
+  <!-- </div>                     -->
+</div>
+</div>
+</div>
    
    
        <!-- </header> -->
