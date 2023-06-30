@@ -70,106 +70,342 @@
   <script src="/Scripts/map.chunk.js"> </script>
   <script src="/Scripts/real-time-map.js" > </script>
 
-<style>
- .navbar a {
-  text-decoration: none !important;
- }
-</style>
+  <!-- Bootstrap 5 cdn  -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="css/los-style.css">
+  <script src="https://kit.fontawesome.com/56475f5c73.js" crossorigin="anonymous"></script>
+  
+  <style>
+    :root {
+  --primary-color: #257b5f;
+  --card-border: #E8E8E9;
+}
+
+
+  </style>
 </head>
 
+
   <body>
-
-    <header id="header"  style="width: 100vw;">
-     <div class="container header-container">
-       <div class="row">
-        <div class="col-md-4"> 
-          <div class="headerflex">
-
-         
-              <a class="logo" href="https://wsdot.wa.gov/" title="Home" rel="home" rel="noreferrer">
-                 <img src="/img/wsdot-logo-white.svg" alt="Home" loading="lazy" style="float: left; position: sticky; text-decoration: none;" /> </a>
+    <header id="header" style="width: 100vw">
+        <div class="container-fluid header-container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="headerflex">
+                <a
+                  class="logo"
+                  href="index.html"
+                  title="Home"
+                  rel="home"
+                  rel="noreferrer"
+                >
+                  <img
+                    src="/img/wsdot-logo-white.svg"
+                    alt="Home"
+                    loading="lazy"
+                    style="float: left; position: sticky; text-decoration: none"
+                  />
+                </a>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <div class="container3">
+                <ul class="topnav2" style="float: right">
+                  <li class="nodec" style="font-weight: 600; font-size: 16px">
+                    <a
+                      class="nodec"
+                      href="https://wsdot.wa.gov/construction-planning/major-projects/sr-520-bridge-replacement-and-hov-program/"
+                      >SR 520 Program</a
+                    >&nbsp;&nbsp;&nbsp;&nbsp;
+                  </li>
+                  <li class="nodec" style="font-weight: 600; font-size: 16px">
+                    <a class="nodec" href="https://www.wsdot.wa.gov/news/">News</a
+                    >&nbsp;&nbsp;&nbsp;&nbsp;
+                  </li>
+                  <li class="nodec" style="font-weight: 600; font-size: 16px">
+                    <a class="nodec" href="https://www.wsdot.wa.gov/goodtogo/"
+                      >Good To Go!</a
+                    >
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
-          <div class="col-md-8"> 
-            <div class="container3"> 
-              <ul class="topnav2" style="float: right;">
-                <li class="nodec" style="font-weight: 600; font-size: 16px;"><a class="nodec" href="https://wsdot.wa.gov/construction-planning/major-projects/sr-520-bridge-replacement-and-hov-program/">SR 520 Program</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>
-                  <li class="nodec" style="font-weight: 600; font-size: 16px;"><a class="nodec" href="https://www.wsdot.wa.gov/news/">News</a>&nbsp;&nbsp;&nbsp;&nbsp;</li>                             
-                  <li class="nodec" style="font-weight: 600; font-size: 16px;"><a class="nodec" href="https://www.wsdot.wa.gov/goodtogo/">Good To Go!</a></li>
-                   </ul>
-                     </div>
-                     
-                   </div>
-       </div>
-
-     </div>
-
-    </header>
-                <div class="navwrap mt-4"> 
-              <div class="container" style="z-index: 1100;"> 
-            <img class="navicon" src="img/sr520.png" style="padding-bottom: 12px; padding-left: 12px"/>
-
-            <div class="navbar navbar navbar-expand-md navbar-light bg-none" style="background-color: transparent; float: center;" id="navbar" role="nav">            
-              <!-- <div class="navbar-header"> -->
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: 25px; background-color:  #97d700; color: #fff;" >
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          
-                       <ul class="menu2 nav" id="nav2">
-                      
-                       <li>          
-                         <a class="nav-rhombus" style="font-style: normal" href="#construction-map">Construction Map</a> 
-                       </li>
-                       <li>          
-                         <a class="nav-rhombus"href="program.html">Program</a>
-                       </li>
-                       <li>          
-                         <a class="nav-rhombus" href="construction-projects.html">Construction Projects</a>
-                       </li>
-                       <li>          
-                         <a class="nav-rhombus" href="contact.html">Contact Us</a>
-                       </li>
-                       <li>          
-                         <a class="nav-rhombus" href="about.html">Outreach & Events</a>
-                       </li>
-                     </ul>  
-                 </div>          
-              <!-- </div>                     -->
-           </div>
-            <!-- <div class="navbar navbar-expand-md navbar-light bg-none" style="text-decoration: none;">
-              
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="float: right;">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                  <ul class="navbar-nav nav menu2" id="nav2" style="list-style-type: none;"></ul>
-                    <li class="nav-item">
-                      <a class="nav-link" style="text-decoration: none;" href="#construction-map">Construction Map</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="program.html">Program</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="construction-projects.html">Construction Projects</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="contact.html">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="about.html">Outreach & Events</a>
-                    </li>
-                  </ul>
-                </div>
-              </div> -->
-            </div>
         </div>
-   
-   
-       <!-- </header> -->
+      </header>
+      <div class="navwrap">
+        <div
+          class="container-fluid nav-container"
+          style="z-index: 1100; width: 100%"
+        >
+          <img
+            class="navicon"
+            src="img/sr520.png"
+            style="padding-bottom: 12px; padding-left: 12px"
+          />
+  
+          <div
+            class="navbar navbar navbar-expand-md navbar-light bg-none"
+            style="background-color: transparent; float: center"
+            id="navbar"
+            role="nav"
+          >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNavDropdown"
+              aria-controls="navbarNavDropdown"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              style="margin-top: 25px; background-color: #97d700; color: #fff"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+              <ul class="menu2 nav" id="nav2">
+                <li>
+                  <a
+                    class="nav-rhombus"
+                    style="font-style: normal"
+                    href="#construction-map"
+                    >Construction Map</a
+                  >
+                </li>
+                <li>
+                  <a class="nav-rhombus" href="program.html">Program</a>
+                </li>
+                <li class="dropdown">
+                  <a
+                    class="nav-rhombus dropdown-toggle"
+                    data-toggle="dropdown"
+                    href="#"
+                    >Construction Projects</a
+                  >
+                  <ul class="dropdown-menu">
+                    <li><a class="nav-rhombus" href="montlake-project.html">Montlake</a></li>
+                    <li><a class="nav-rhombus" href="i5-connection-project.html">I-5 Connection</a></li>
+                    <li><a class="nav-rhombus" href="portage-bay-project.html">Portage Bay</a></li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="nav-rhombus" href="contact.html">Contact Us</a>
+                </li>
+                <li>
+                  <a class="nav-rhombus" href="events.html">Outreach & Events</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- #### END NAV section ##### -->
+                         <!-- #### START Main section ##### -->
+<main class="contact-main">
+                      <div class="container-fluid">
+                        <h1>Contact us</h1>
+                        <div class="row">
+                          <div class="col col-sm-8 col-left">
+                            <div class="contact-article">
+                              <span class="contact-h3">
+                                <i class="fa fa-xl fa-phone"></i><h3>Call Us</h3>
+                              </span>
+                              <div>
+                                <p>
+                                  For questions about closures or construction activities, call our 24-hr project construction hotlines:
+                                </p>
+                                <ul class="contact-list">
+                                  <li>For Montlake Project construction, call <a href="tel:2067758885" aria-label="tel:2067758885">206-775-8885</a> (24-hr / call or text)</li>
+                                  <li>For SR 520/I-5 Connection Project construction, call <a href="tel:2063162559" aria-label="tel:2063162559">206-316-2559</a> (24-hr / call or text)</li>
+                                  <li>For general SR 520 inquiries, call <a href="tel:2062009484" aria-label="tel:2062009484">206-200-9484</a> (8-5, Mon-Fri)</li>
+                                  <li>To contact our ombudsman, David Goldberg, call <a href="tel:2024127930" aria-label="tel:2024127930">202-412-7930</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="contact-article">
+                              <span class="contact-h3">
+                                <i class="fa fa-xl fa-file"></i><h3>Write Us</h3>
+                              </span>
+                              <div class="comment-form-container">
+                                <form method="post">
+                                  <div class="form-group">
+                                    <label for="comment-form-area">Comment form</label>
+                                    <textarea class="form-control" id="comment-form-area" rows="8"></textarea>
+                                  </div>
+                                  <button type="submit" class="btn btn-primary btn-custom">Submit</button>
+                                </form>
+                              </div>
+                            </div>
+                            <div class="contact-article">
+                              <span class="contact-h3">
+                                <i class="icon-md"><img src="img/icons/email.jpg" alt="Envelope"></i><h3>Email us</h3>
+                              </span>
+                              <div>
+                                <ul class="contact-list">
+                                  <li>General SR 520 inbox: <a href="mailto:SR520bridge@wsdot.wa.go" aria-label="Email: SR520bridge@wsdot.wa.go">SR520bridge@wsdot.wa.go</a></li>
+                                  <li>Ombudsman: <a href="mailto:david.goldberg@wsdot.wa.gov" aria-label="Email: david.goldberg@wsdot.wa.gov">david.goldberg@wsdot.wa.gov</a></li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="contact-article">
+                              <span class="contact-h3">
+                                <i class="icon-md"><img src="img/icons/mail.jpg" alt=""></i><h3>Mail us</h3>
+                              </span>
+                              <div>
+                                <ul class="contact-list">
+                                  <li>SR 520 Bridge Replacement and HOV Program</li>
+                                  <li>999 Third Ave., Suite 2300</li>
+                                  <li>Seattle, WA 98104</li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="contact-article">
+                              <span class="contact-h3">
+                                <i class="icon-md"><img src="img/icons/follow.jpg" alt=""></i><h3>Follow us</h3>
+                              </span>
+                              <div>
+                                <ul class="contact-list social-media-list">
+                                  <li><i class="fa fa-lg fa-twitter"></i>Twitter</li>
+                                  <li><i class="fa fa-lg fa-youtube"></i>YouTube</li>
+                                  <li><i class="fa fa-lg fa-flickr"></i>Flickr</li>
+                                  <li><i class="fa fa-lg fa-envelope"></i>Sign up for our email newsletter</li>
+                                  <p>
+                                    We regularly send subscribers email updates with the 
+                                    latest news about current or upcoming contstruction activities. 
+                                    Visit the <a href="#" aria-label="">WSDOT email updates page</a>, enter your email address, 
+                                    and under "Construction, Planning & Projects," open "Projects," 
+                                    then select one or both of the following:
+                                  </p>
+                                  <ul class="contact-list p-list">
+                                    <li>
+                                      <span class="li-lead">SR 520 Bridge Replacement and HOV Program</span>
+                                      <p>Periodic updates on the entire program. Includes information on highway closures, construction milestones, and upcoming major public meetings.</p>
+                                    </li>
+                                    <li>
+                                      <span class="li-lead">SR 520 Rest of the West News</span>
+                                      <p>Weekly updates focusing on SR 520 construction activities, effects and public meetings in Seattle, from Lake Washington to I-5.</p>
+                                    </li>
+                                  </ul>
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col col-sm-4 col-right">
+                            <aside id="sidebar" class="sidebar">
+
+                              <article class="sidebar-card twitter-card">
+                                <div class="card-content">
+                                  <div class="sidebar-card_img">
+                                    <img src="https://placehold.jp/250x200.png" alt="placeholder img">
+                                  </div>
+                                  <p class="sidebar_text">View up-to-date travel conditions including travel alerts,
+                                    cameras, route times, road and bridge restrictions, and weather alerts.</p>
+                                  <a href="#" class="btn btn-primary">Follow us on Twitter</a>
+                                </div>
+                              </article>
+                              <article class="sidebar-card">
+                                <div class="card-content">
+                                  <div class="sidebar-card_img">
+                                    <img src="https://placehold.jp/250x200.png" alt="placeholder img">
+                                  </div>
+                                  <p class="sidebar_text">View up-to-date travel conditions including travel alerts,
+                                    cameras, route times, road and bridge restrictions, and weather alerts.</p>
+                                  <a href="#" class="btn btn-primary">WSDOT Real-time travel map</a>
+                                </div>
+                              </article>
+                              <article class="sidebar-card">
+                                <div class="card-content">
+                                  <div class="sidebar-card_img">
+                                    <img src="https://placehold.jp/250x200.png" alt="placeholder img">
+                                  </div>
+                                  <p class="sidebar_text">View up-to-date travel conditions including travel alerts,
+                                    cameras, route times, road and bridge restrictions, and weather alerts.</p>
+                                  <a href="#" class="btn btn-primary">Live construction cams</a>
+                                </div>
+                              </article>
+                              <article class="sidebar-card subscribe-card">
+                                <div class="card-content">
+                                  <form class="sidebar-email" method="post">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" placeholder="" required>
+                                    <button type="submit" class="btn btn-primary">Sign up for email updates</button>
+                                  </form>                                  
+                                  <div>
+                                    <p class="sidebar_text">To sign up, visit the WSDOT email updates page, 
+                                      enter your email address, and under "Construction, Planning & Projects," 
+                                      open "Projects," then select one or both of the following:</p>
+                                      <a href="#" aria-label="#" class="sidebar_text">SR 520 Bridge Replacement and HOV Program</a>
+                                      <a href="#" aria-label="#" class="sidebar_text" >SR 520 Rest of the West News</a>
+                                  </div>
+                                </div>
+                              </article>
+
+                            </aside>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col col-sm-9">
+                            <p class="contact-bottom-text">
+                              Note: The Washington State Department of Transportation 
+                              is a public agency and is subject to the State of Washington's Public Records Act 
+                              (RCW 42.56). Therefore, public comments and questions may be made available to anyone 
+                              requestng them for non-commercial purposes.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </main>
+                    
+
+
+
+
 
       
-          <!-- #### END NAV section ##### -->
 
+ <!-- ## Start footer ###  -->
+ <footer class="footer">
+    <div class="container">
+      <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap;">
+        <div class="col-md-3">
+          <div class="logo-container" style="margin-bottom: 12px; display: block; width: 267px; height: 43px; margin-right: 14px;">
+            <img class="foot-logo" src="/Content/images/wsdot-logo-white.png" alt="WSDOT logo" width="267px" height="43px" />
+          </div>
+        </div>
+  
+        <div class="col-md-2">
+          <ul class="footerrow">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="https://wsdot.wa.gov/about/americans-disabilities-act-ada">Accessibility</a></li>
+            <li><a href="https://wsdot.wa.gov/about/title-vi-limited-english-proficiency">Title VI</a></li>
+   
+          </ul>
+     </div><div class="col-md-6">
+          <div class="social-row" style="margin-top: 18px;">
+    
+            <a href="https://www.facebook.com/wsdot" class="social-link"><i class="fa-brands fa-facebook" style="text-decoration: none;"></i> </a>
+
+            <a href="https://twitter.com/wsdot_520" class="social-link"><i class="fab fa-twitter"></i> </a>
+
+            <a href="https://www.instagram.com/wsdot/" class="social-link"><i class="fab fa-instagram"></i> </a>
+
+            <a href="https://www.youtube.com/playlist?list=PLEvVhy_eoUuDlR31tXgXNYbNKFhZ5k0p_" class="social-link"><i class="fab fa-youtube"></i></a>
+
+            <a href="hhttps://www.flickr.com/photos/wsdot/collections/72157626070884650/" class="social-link"><i class="fab fa-flickr"></i></a>            </ul>
+   
+        </div>
+      </div> 
     </div>
-     </div> 
+    <div class="copyright" style="text-align: center; margin-top: 5px;">Copyright WSDOT &copy;
+      2023</div>
+  </footer>
+   
+
+<!-- ### End footer ### -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
