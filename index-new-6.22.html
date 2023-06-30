@@ -71,6 +71,12 @@
   <script src="/Scripts/real-time-map.js" > </script>
 
 <style>
+    :root {
+  --primary-color: #257b5f;
+  --card-border: #E8E8E9;
+}
+
+
  .navbar a {
   text-decoration: none !important;
  }
@@ -96,6 +102,24 @@
  #navbar {
   justify-content: flex-end;
   padding-right: 5%;
+ }
+ ul.dropdown-menu {
+  padding: 1rem 1rem 1rem 2rem ;
+  font-size: 1.3rem !important;
+  width: 95%;
+  top: 0;
+  left: -2rem;
+                         border-radius: 5px;
+                         position: relative;
+                         transform: skewX(-10deg);
+                         transition: all 0.3s;
+                         border: #33957f 2px solid;
+
+ }
+
+ .dropdown-menu li .nav-rhombus {
+  padding: .8rem;
+  color: var(--primary-color);
  }
 
  @media (max-width: 767px) {
@@ -162,8 +186,13 @@
            <li>          
              <a class="nav-rhombus"href="program.html">Program</a>
            </li>
-           <li>          
-             <a class="nav-rhombus" href="construction-projects.html">Construction Projects</a>
+           <li class="dropdown">          
+             <a class="nav-rhombus dropdown-toggle"  data-toggle="dropdown" href="#">Construction Projects</a>
+             <ul class="dropdown-menu">
+               <li><a class="nav-rhombus" href="#">Montlake</a></li>
+               <li><a class="nav-rhombus" href="#">I-5 Connection</a></li>
+               <li><a class="nav-rhombus" href="#">Portage Bay</a></li>
+             </ul>
            </li>
            <li>          
              <a class="nav-rhombus" href="contact.html">Contact Us</a>
@@ -292,7 +321,9 @@
      <div class="col-lg-4 col-md-6 col-sm-10" style="justify-content: space-between;">   
     <!-- Card 1 start  -->
        <div class="card h-100 mb-3" style="min-height: 450px">
-        <div class="card-body" style="min-height: 400px">   <a class="twitter-timeline" data-height="400" href="https://twitter.com/wsdot_520?ref_src=twsrc%5Etfw">Tweets by wsdot_520</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>     
+        <div class="card-body" style="min-height: 400px">   
+          <a class="twitter-timeline" data-height="400" href="https://twitter.com/wsdot_520?ref_src=twsrc%5Etfw">Tweets by wsdot_520</a> 
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>     
            <div class="card-text center" style="margin-top: 10px;"> 
            <a href="https://twitter.com/wsdot_520" class="btn btn-primary parallelogram-link-sm"><span
              class="fab fa-twitter">&nbsp;&nbsp;</span>Follow us</a>
