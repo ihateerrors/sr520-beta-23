@@ -1033,3 +1033,12 @@ font-size: 1.4em; padding: 1em; font-size: 600;
  width: 100%;
 }
 }
+
+.project-materials-heading-paddig {
+  padding-left: 10px;
+}
+@media screen and (max-width: 572px) {
+  .wdot-dkgreen {
+    padding-left: 20px;
+  }
+}
