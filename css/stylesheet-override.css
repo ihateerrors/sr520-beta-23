@@ -1024,3 +1024,7 @@ font-size: 1.4em; padding: 1em; font-size: 600;
  width: 100%;
 }
 }
+
+footer .social-row a {
+  border: none;
+}
