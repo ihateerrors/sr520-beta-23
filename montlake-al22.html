@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8" />
 
@@ -73,56 +70,10 @@
   <script src="/Scripts/map.chunk.js"> </script>
   <script src="/Scripts/real-time-map.js" > </script>
 
-  <script>
-    var $buoop = {c: 2};
-    function $buo_f() {
-      var e = document.createElement("script");
-      e.src = "//browser-update.org/update.min.js";
-      document.body.appendChild(e);
-    };
-    try {
-      document.addEventListener("DOMContentLoaded", $buo_f, false);
-    }
-    catch (e) {
-      window.attachEvent("onload", $buo_f);
-    }
-  </script>
 
-  <script>
-    $(document).ready(function () {
-      $(".dateFilter").datepicker(
-        {showOn: "both", buttonImage: "/images/calendar.gif", buttonImageOnly: true}
-      );
-      showPlaces();
-    });
 
-    function updateForm() {
-      clearMap();
-      showPlaces();
-    }
 
-    function clickAll() {
-      $("input[name='typeId']").removeAttr("checked");
-      updateForm();
-    }
 
-    function clickOne() {
-      var anyChecked = false;
-      var boxes = $("input[name='typeId']");
-      $.each(boxes, function (i, box) {
-        if (box.checked) {
-          anyChecked = true;
-        }
-      });
-
-      if (anyChecked) {
-        $("#anyBox").removeAttr("checked");
-      } else {
-        $("#anyBox").attr("checked", "checked");
-      }
-      updateForm();
-    }
-    </script>
 </head>
 
   <body>
@@ -150,25 +101,25 @@
       <div class="navbar-header">
         <div class="region region-navigation">          
           <div class="nav-tabs break-lg-control">
-            <nav aria-describedby="block-mainnavigation-8-menu">
-              <h2 class="sr-only menu-heading" id="block-mainnavigation-8-menu d-none">Main navigation</h2>
+            <nav -describedby="block-mainnavigation-8-menu">
+              <h2 class="sariar-only menu-heading" id="block-mainnavigation-8-menu d-none"></h2>
               <ul class="menu2 nav" id="nav2"
                 style="padding-top: 2.5em; margin-bottom: 2em; margin-left: 25px; padding-left: 25px;">
                 <img src="img/sr520.png" style="float: left;" />
                 <li>          
-                  <a href="#map">Construction Map</a>
+                  <a href="#construction-map">Construction Map</a>
                 </li>
                 <li>          
-                  <a href="/program.html">Program</a>
+                  <a href="program.html">Program</a>
                 </li>
                 <li>          
-                  <a href="/construction-projects.html">Construction Projects</a>
+                  <a href="construction-projects.html">Construction Projects</a>
                 </li>
                 <li>          
-                  <a href="/contact.html">Contact Us</a>
+                  <a href="contact.html">Contact Us</a>
                 </li>
                 <li>          
-                  <a href="/about.html">Outreach & Events</a>
+                  <a href="about.html">Outreach & Events</a>
                 </li>
               </ul>  
           </div>          
@@ -186,7 +137,7 @@
                 <div class="row">
                   <h1 class="wdot-dkgreen">Montlake Project</h1>
                     <div>
-                        <img src="https://placehold.co/1200x600" alt="">
+                        <img src="img/montlake-project.jpg" alt="montlake image">
                     </div>
                 </div>
               </div>
@@ -267,31 +218,55 @@
                       </div>
                     </div>
                   </div>
-                  <div class="col-lg-3 col-md-3 col-sm-12">
+                  <!-- Cards -->
+                  <div class="col-lg-3 col-md-12 col-sm-12 center" style="margin-bottom: 2em;">
+                    
                     <div class="container4 container-fluid">
-                      <div  style="margin-bottom: 1em;">
-                        <div>                                                                                             
-                          <a class="twitter-timeline" data-height="600" href="https://twitter.com/wsdot_520?ref_src=twsrc%5Etfw">Tweets by wsdot_520</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-                        </div>      
+                      <div class="row">
+                        <div class="col-lg-12 col-md-4">
+                          <div class="card-montlake">
+                            <div class="card-body">   <a class="twitter-timeline" data-height="400" href="https://twitter.com/wsdot_520?ref_src=twsrc%5Etfw">Tweets by wsdot_520</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>     
+                              <div class="card-text center" style="margin-top: 10px;"> 
+                              <a href="https://twitter.com/wsdot_520" class="btn btn-primary parallelogram-link-sm" style="margin-bottom: 1.5em;"><span
+                                class="fab fa-twitter">&nbsp;&nbsp;</span>Follow us</a>
+                              </div>
+                              </div>  
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-4">
+                          <div class="card-montlake">
+                            <div>
+                              <div style="padding-top: -25px;">
+                              <iframe src="https://public.earthcam.net/tJ90CoLmq7TzrY396Yd88B9B2qPMb6E316d3h59C-OM!/sr_520__-_montlake_project/camera_1/view_1" width="100%" height="400px"></iframe>
+                            </div><br>
+                              <div class="card-body">
+                                    <a href="https://public.earthcam.net/tJ90CoLmq7TzrY396Yd88B9B2qPMb6E316d3h59C-OM!/sr_520__-_montlake_project/camera_1/view_1" class="btn btn-primary parallelogram-link-sm" style="margin-bottom: 1.5em;">Live construction cams</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-12 col-md-4">
+                          <div class="card-montlake" style="font-size: 1em !important; margin-top: 10px;">
+                            <div class="card-body" style="padding-left: 5px; padding-right: 5px;"><br>
+                            <div class="pl-2 pr-2 ml-3 mr-3 mt-4">
+                            <h3 style="color: #007b5f;">Never miss a 520 Construction alert!</h3>
+                            <div class="containernew">
+                            <p style="margin-left: 25px; margin-right: 25px; margin-top: 14px;  font-size: 1em; text-align: left;">Join our email list to get all the latest news and updates.</p>
+                              <p style="margin-left: 25px; margin-right: 25px;  font-size: 1em; text-align: left;">To sign up, visit the WSDOT email updates page, enter your email address, and under "Construction, Planning & Projects," open "Projects," then select one or both of the following:</p>   
+                              
+                                    <a href="#" target="_blank">SR 520 Bridge Replacement and HOV Program</a><br> <a href="#" target="_blank">SR 520 Rest of the West News </a>         
                       </div>
-                      <div class="card">
-                        <div class="card-body border">
-                          <img src="https://placehold.co/600x400" alt="">
+                
+                      <div class="card-body" style="float: bottom;">
+                        <a href="link_to_other_page_2" class="btn btn-primary parallelogram-link-sm" style="margin-bottom: 1.5em;">Sign up for email updates</a>
                         </div>
-                        <div class="card-text center">
-                          <p>View up-to-date travel conditions including travel alerts, cameras, route times, road and bridge restriction, and weather alerts.</p>
-                          <button id="map1Button" class="btn primary parallelogram-link">WSDOT Real-time travel map</button>
                         </div>
-                      </div>
-                      <div class="card">
-                        <div class="card-body border">
-                          <img src="https://placehold.co/600x400" alt="">
-                        </div>
-                        <div class="card-text center">
-                          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa consequuntur soluta adipisci velit culpa? Placeat voluptates, assumenda qui porro aliquam, officiis</p>
-                          <button id="map1Button" class="btn primary parallelogram-link">Live construction cams</button>
+                </div>
+                  <!-- Card 3 end  -->
+                          </div>
                         </div>
                       </div>
+
                     </div>           
                   </div>
                 </div>
@@ -304,60 +279,48 @@
 
  <!-- ## Start footer ###  -->
 
-    <footer class="footer">
-      <div class="container">
-        <div class="region region-footer">
-
-
-          <section id="block-footer2">
-            <div class="row"> 
-              <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                <div class="container">
-                  <img src="/images/logo.svg" >
-          
-
-              </div>
-
-              <div class="col-lg-9 block block-block-content clearfix">
-                <ul>
-                  <li><a data-entity-substitution="canonical" data-entity-type="node"
-                      data-entity-uuid="0abeb7a4-afe4-4d76-9225-0836340d075b"
-                      href="/Contact" title="Send us your feedback">Contact</a></li>
-                  <li><a title="Americans with Disabilities Act (ADA)" href="https://wsdot.wa.gov/about/americans-disabilities-act-ada">Accessibility</a></li>
-                  <li><a href="https://wsdot.wa.gov/about/title-vi-limited-english-proficiency"
-                      title="Title VI/Limited English Proficiency">Title VI</a></li>
-                  <li><a href="/index">Site index</a></li>
-                </ul>
-                <div style="display: flex; flex-direction: row; float: right;">
-                  <ul>                <li><a href="https://www.facebook.com/wsdot"><span class="fontawesome-icon-inline"><span
-                          class="fab fa-facebook-square"></span></span><span class="social-text"> Facebook</span></a>
-                  </li>
-                  <li><a href="https://twitter.com/wsdot"><span class="fontawesome-icon-inline"><span
-                          class="fab fa-twitter-square"></span></span><span class="social-text"> Twitter</span></a>
-                  </li>
-                  <li><a href="https://www.instagram.com/wsdot/"><span class="fontawesome-icon-inline"><span
-                          class="fab fa-instagram"></span></span><span class="social-text"> Instagram</span></a></li>
-                  <li><a href="https://www.youtube.com/wsdot"><span class="fontawesome-icon-inline"><span
-                          class="fab fa-youtube-square"></span></span><span class="social-text"> YouTube</span></a>
-                  </li>
-       
-                  <li><a href="https://www.flickr.com/photos/wsdot/"><span class="fontawesome-icon-inline"><span
-                          class="fab fa-flickr"></span></span><span class="social-text"> Flickr</span></a></li>
-  
-                </ul>              
-              </div>  
-          </div>
-
-            </div>
-         
-      
-
-
+ <footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="logo-container">
+          <img class="foot-logo" src="/Content/images/wsdot-logo-white.png" alt="WSDOT logo" width="267px" height="43px" />
+        </div>
       </div>
-    </footer>
+
+      <div class="col-lg-7 block block-block-content clearfix">
+        <ul style="line-height: 20px;">
+          <li><a href="/Contact">Contact</a></li>
+          <li><a href="https://wsdot.wa.gov/about/americans-disabilities-act-ada">Accessibility</a></li>
+          <li><a href="https://wsdot.wa.gov/about/title-vi-limited-english-proficiency">Title VI</a></li>
+          <!-- <li><a href="/index">Site index</a></li> -->
+        </ul>
+
+        <div class="social-row">
+          <ul class="social-ul" style="display: inline-flex; flex-direction: row; text-decoration: none; font-size: 30px;">
+            <li><a href="https://www.facebook.com/wsdot" class="social-link"><i class="fa-brands fa-facebook" style="text-decoration: none;"></i> </a></li>
+            <li><a href="https://twitter.com/wsdot_520" class="social-link"><i class="fab fa-twitter"></i> </a></li>
+            <li><a href="https://www.instagram.com/wsdot/" class="social-link"><i class="fab fa-instagram"></i> </a></li>
+            <li><a href="https://www.youtube.com/playlist?list=PLEvVhy_eoUuDlR31tXgXNYbNKFhZ5k0p_" class="social-link"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.flickr.com/photos/wsdot/" class="social-link"><i class="fab fa-flickr"></i></a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-links">
+          <!-- <ul>
+            <li><a href="/Contact">Link 1</a></li>
+            <li><a href="/Contact">Link 2</a></li>
+            <li><a href="/Contact">Link 3</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
   </div>
 
-  <div class="footer-bottom">
+  <!-- <div class="footer-bottom">
     <div class="container">
       <div class="region region-footer-bottom">
         <section id="block-copyright"
@@ -517,6 +480,7 @@
               </div>
 
             </div>
+          </div>
             <ul>
               <li>Copyright WSDOT ©2023 </li>
               <li><a data-entity-substitution="canonical" data-entity-type="node"
@@ -531,7 +495,7 @@
           </div>
         </section>    
       </div>
-    </div>
+    </div> -->
 
 <!-- ### End footer ### -->
 
