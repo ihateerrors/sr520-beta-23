@@ -14,7 +14,8 @@
 }
 
 .container-fluid {
-  max-width: 1200px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 .cal-placeholder {
     width: 100%;
