@@ -1157,7 +1157,7 @@ li .nav-rhombus:hover {
 
 .li-lead {
   font-weight: 600;
-  font-size: 1.25em;
+
 }
 
 form .btn-custom,
@@ -1169,12 +1169,14 @@ form .btn-custom,
 .contact-list {
   font-size: 1em;
 }
+.contact-list li {
+  font-size: 1.2em;
+
+}
 .contact-article > div {
   margin: auto 2rem;
 }
-/* .contact-list li:not(:last-child, .social-media-list li) {
-  margin-bottom: 1rem;
-} */
+
 .social-media-list i {
   margin-right: 1rem;
 }
