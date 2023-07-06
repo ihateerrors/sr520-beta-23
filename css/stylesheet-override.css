@@ -460,8 +460,8 @@ footer {
   }
   
   .footer .social-row a:hover {
-    text-decoration: underline;
-    color: #99ccff;
+
+    color: #99CABF;
   }
   .social-row a:visited {
     text-decoration: underline;
@@ -1116,8 +1116,8 @@ ul.dropdown-menu {
   transform: skewX(-5deg);
 
 }
-.dropdown-menu li .nav-rhombus:hover {
-  border-bottom: 2px solid transparent;
+li .nav-rhombus:hover {
+  border-bottom: 2px solid var(--primary-color);
 }
 
 @media (max-width: 767px) {
