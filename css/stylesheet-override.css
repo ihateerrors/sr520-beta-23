@@ -1088,8 +1088,7 @@ footer .social-row a {
   padding-top: 0.8rem;
   justify-content: flex-start;
 }
-.navbar-toggler {
-}
+
 #navbar {
   justify-content: flex-end;
   padding-right: 5%;
@@ -1116,8 +1115,8 @@ ul.dropdown-menu {
   transform: skewX(-5deg);
 
 }
-.dropdown-menu li .nav-rhombus:hover {
-  border-bottom: 2px solid transparent;
+li .nav-rhombus:hover {
+  border-bottom: 2px solid var(--primary-color);
 }
 
 @media (max-width: 767px) {
@@ -1143,10 +1142,7 @@ ul.dropdown-menu {
 .col-left {
   padding: 0 2rem 0 6rem;
 }
-.contact-main p{
-  font-size: 1em;
-  line-height: 1.2;
-}
+
 .contact-main {
   padding-left: 5%;
   padding-right: 5%;
@@ -1160,6 +1156,7 @@ ul.dropdown-menu {
 
 .li-lead {
   font-weight: 600;
+
 }
 
 form .btn-custom,
@@ -1169,14 +1166,16 @@ form .btn-custom,
   padding: 8px 80px !important;
 }
 .contact-list {
-  list-style: none;
+  font-size: 1em;
+}
+.contact-list li {
+  font-size: 1.2em;
+
 }
 .contact-article > div {
   margin: auto 2rem;
 }
-.contact-list li:not(:last-child, .social-media-list li) {
-  margin-bottom: 1rem;
-}
+
 .social-media-list i {
   margin-right: 1rem;
 }
@@ -1190,9 +1189,7 @@ form .btn-custom,
 .fa {
   color: var(--primary-color);
 }
-.icon-md {
-  width: 32px;
-}
+
 .sidebar {
     display: flex;
     flex-wrap: wrap;
@@ -1217,6 +1214,7 @@ form .btn-custom,
 .sidebar_text,
 p.sidebar_text {
    font-size: 12px;
+   line-height: 1.2em;
    padding-bottom: 0;
 }
 .sidebar-card_img,
@@ -1257,4 +1255,20 @@ a.button {
     color: #fff !important;
     text-decoration: none;
     border: none;
+}
+
+/* === Events and Outreach === */
+
+#outreach-main h1 {
+  margin: 5rem 0rem 0em;
+  color: var(--primary-color);
+}
+#outreach-main h2 {
+    font-size: 1.7em;
+    line-height: 1.3;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+.cal-placeholder {
+    width: 100%;
 }
