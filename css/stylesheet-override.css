@@ -1192,7 +1192,7 @@ form .btn-custom,
   color: var(--primary-color);
 }
 
-.sidebar {
+/* .sidebar {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
@@ -1257,7 +1257,7 @@ a.button {
     color: #fff !important;
     text-decoration: none;
     border: none;
-}
+} */
 
 /* === Events and Outreach === */
 
@@ -1274,3 +1274,26 @@ a.button {
 .cal-placeholder {
     width: 100%;
 }
+
+/* === Side bar === */
+.card-body h3 {
+  text-align: left;
+
+}
+.card-body p {
+  line-height: 1.6em;
+  font-size: 1em;
+  text-align: left;
+}
+.card-body .card-subtext {
+  font-size: .8em;
+  line-height: 1.3em;
+}
+
+.card-body .icon-lg {
+  font-size: 8rem;
+}
+.icon-container {
+  margin-bottom: 1em;
+}
+
