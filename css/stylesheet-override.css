@@ -1192,6 +1192,11 @@ form .btn-custom,
   color: var(--primary-color);
 }
 
+.mail-list,
+.p-list {
+  list-style: none;
+}
+
 /* .sidebar {
     display: flex;
     flex-wrap: wrap;
