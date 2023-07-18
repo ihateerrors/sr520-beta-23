@@ -1305,4 +1305,13 @@ a.button {
 .header-link-color a:hover {
   color: #99CABF !important;
 }
-
+.alert-box {
+  padding: 5px 13px;
+  background:#ffb500;
+  width: 80%;
+}
+.alert-body{
+  width: 80%;
+  border: 2px solid;
+  border-color:#ffb500;
+}
