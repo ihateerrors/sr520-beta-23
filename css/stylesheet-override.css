@@ -1320,3 +1320,9 @@ a.button {
   border: 2px solid;
   border-color:#ffb500;
 }
+
+
+#map-navlink {
+  background-color: #007b5f !important;
+  color: #fff !important;
+}
