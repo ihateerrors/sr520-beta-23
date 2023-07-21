@@ -659,8 +659,13 @@ footer {
 }
 
 .rhombus-2:hover {
- background-color: rgb(151, 215, 0, .5);
- border: #97D700 2px solid;
+  /* old hover */
+ /* background-color: rgb(151, 215, 0, .5);
+ border: #97D700 2px solid; */
+
+ /* New hover */
+ background-color: #eeeeee;
+ border: #eeeeee 2px solid;
  color: #ffff !important;
 }
 .rhombus-2 a {
