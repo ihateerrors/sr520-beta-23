@@ -569,7 +569,6 @@ footer {
 }
 
 .btn.search-form__submit {
-
   background: #97d700;
   border-bottom: 1px solid #6699ee;
   border-bottom-right-radius: 4px;
@@ -609,8 +608,6 @@ footer {
   align-items: left;
   text-decoration: none;
   justify-content: space-around;
-  /* height: 100vh; */
-  /* margin: 10px 20px; */
   padding: 2px;
 }
 
@@ -624,7 +621,10 @@ footer {
   text-decoration: none;
   margin-top: 12px;
   padding: 12px 24px;
-  border-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: none !important;
+  border-bottom-right-radius: none !important;
   position: relative;
   transform: skewX(-10deg);
   transition: all 0.3s;
@@ -1319,4 +1319,10 @@ a.button {
   width: 80%;
   border: 2px solid;
   border-color:#ffb500;
+}
+
+
+#map-navlink {
+  background-color: #007b5f !important;
+  color: #fff !important;
 }
