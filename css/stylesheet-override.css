@@ -1202,6 +1202,11 @@ form .btn-custom,
   list-style: none;
 }
 
+label[for="sgE-7407183-1-13-element"]::after {
+  content: "*";
+  color: red;
+}
+
 /* .sidebar {
     display: flex;
     flex-wrap: wrap;
