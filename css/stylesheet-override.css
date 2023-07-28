@@ -1138,7 +1138,14 @@ li .nav-rhombus:hover {
   }
 }
 
+header,
+.navwrap {
+  position: absolute;
+}
 
+main {
+  padding-top: 10rem;
+}
 /* ===== Contact Page ==== */
 
 .contact-main h1 {
