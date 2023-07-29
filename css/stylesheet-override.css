@@ -1371,12 +1371,12 @@ a.button {
 }
 
 .card-btn-container {
-  display: flex;
-  flex-direction: column;
-  padding: 0 2rem;
+  display: grid;
+  place-content: center;
+  margin-bottom: 1rem;
   line-height: 0;
   gap: .5rem;
-  margin-bottom: 10px;
+
 }
 .card-btn-container .btn-primary {
   margin: 0;
