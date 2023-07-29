@@ -1135,6 +1135,12 @@ li .nav-rhombus:hover {
 
 
 @media (max-width: 767px) {
+  #nav2 {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
   .navwrap {
     margin-top: 0;
     position: static;
@@ -1142,11 +1148,6 @@ li .nav-rhombus:hover {
 
   }
   
-  #nav2 {
-    flex-direction: column;
-    justify-content: center;
-    gap: 1rem;
-  }
   ul.dropdown-menu {
     position: relative;
     top: 0;
@@ -1328,6 +1329,7 @@ a.button {
 .card-body .card-subtext {
   font-size: .8em;
   line-height: 1.3em;
+  margin-bottom: 0;
 }
 
 .card-body .icon-lg {
@@ -1355,4 +1357,27 @@ a.button {
 #map-navlink {
   background-color: #007b5f !important;
   color: #fff !important;
+}
+
+@media (max-width: 1200px) {
+
+}
+
+
+.center-btn {
+  display: grid;
+  place-content: center;
+  
+}
+
+.card-btn-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 2rem;
+  line-height: 0;
+  gap: .5rem;
+  margin-bottom: 10px;
+}
+.card-btn-container .btn-primary {
+  margin: 0;
 }
