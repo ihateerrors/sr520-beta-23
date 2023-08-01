@@ -346,6 +346,12 @@ border-width: 1px 1px 5px;
 
 .wdot-dkgreen {color:#007b5f;}
 
+.map-tab {
+  /* border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0; */
+  margin: 0 0 0 10px;
+}
+
 .mapcontainer {
 background-color:  #ffffff;
 border-bottom: 5px solid  #007b5f;
