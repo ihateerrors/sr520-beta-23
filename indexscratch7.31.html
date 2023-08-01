@@ -25,10 +25,7 @@
   <link rel="stylesheet" media="all" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
     integrity="sha256-bZLfwXAP04zRMK2BjiO8iu9pf4FbLqX6zitd+tIvLhE=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
-  <!-- <link rel="stylesheet" media="all"
-    href="https://cdn.jsdelivr.net/npm/@unicorn-fail/drupal-bootstrap-styles@0.0.2/dist/3.4.0/8.x-3.x/drupal-bootstrap.min.css"
-    integrity="sha512-tGFFYdzcicBwsd5EPO92iUIytu9UkQR3tLMbORL9sfi/WswiHkA1O3ri9yHW+5dXk18Rd+pluMeDBrPKSwNCvw=="
-    crossorigin="anonymous" /> -->
+
   <link rel="stylesheet" media="all" href="/css/styles2.css" />
   <link rel="stylesheet" media="all" href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" />
   <link rel="stylesheet" media="all" href="/css/styles3.css" />
@@ -39,17 +36,8 @@
     href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap" />
   <link rel="stylesheet" media="all"
     href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&amp;display=swap" />
-  <link rel="stylesheet" media="all"
-    href="https://fonts.googleapis.com/css2?family=Gayathri:wght@100;400;700&amp;display=swap" />
-  <link rel="stylesheet" media="all"
-    href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&amp;display=swap" />
-  <link rel="stylesheet" media="all"
-    href="https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" />
 
-  <!-- <link rel="stylesheet" type="text/css" href="/css/bootstrap-grid.min.css" /> -->
-  <!-- <link rel="stylesheet" media="all"
-    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css" />
-  <script src="/Scripts/jquery-min.js"></script> -->
+  <script src="/Scripts/jquery-min.js"></script>
   <!-- <script src="https://use.fontawesome.com/ee1c3da296.js"></script> -->
   <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css" /> -->
   <script src="https://kit.fontawesome.com/da8d22a218.js" crossorigin="anonymous"></script>
@@ -64,11 +52,11 @@
   <script src="/Scripts/moment.js" type="text/javascript"></script>
   <script src="/Scripts/ActivityMap.js?v=1.1" type="text/javascript"></script>
 
-  <script src="/Scripts/script5.js" type="text/javascript"></script>
-  <script src="/Scripts/script6.js" type="text/javascript"></script>
+  <!-- <script src="/Scripts/script5.js" type="text/javascript"></script>
+  <script src="/Scripts/script6.js" type="text/javascript"></script> -->
 
   <script src="/Scripts/map.chunk.js"> </script>
-  <script src="/Scripts/real-time-map.js" > </script>
+
 
 <style>
  .navbar a {
@@ -171,211 +159,17 @@
 
     <!-- #### END NAV section ##### --> 
     <main>
-    <div id="alert-banner-top" class="container-fluid"  style="width: 100vw; padding-top: 1.5em; z-index: -1;">
-      <div class="row">
-      <div class="orange-banner" style="background-color: #ffb500; width: 100vw; min-height: max-content; justify-content: center;">    
-         <div style="margin-left: 7%;"> 
-        <p class="alerthead"><strong>No closures in effect today.
+<div class="container">
 
-          </p>   
-
-       </div> 
-       </div>
-      </div>
+    <div class="orangeMap">
+        <div id="map"></div>
     </div>
-     </div> 
-
-<!-- ###  Main container  ### -->
-     <div class="container4" style="padding-left: 5%; padding-right: 5%; margin-top: 20px; margin-bottom: 20px;"> 
-        <!-- #########   start maps  ######## -->
-
-       <div class="container-fluid">
-          <div class="row"> 
-            <div class="blockhead" style="display: block; margin-left: 3%;"> 
-          <h1 class="wdot-dkgreen">SR 520 Construction Corner</h1>
-          <p><strong>The go-to source for information on SR 520 construction and closures.</strong></p>
-       <p></p>
-      </div>
-          </div>
-        </div>
-        <div id="construction-map" class="container-fluid">
-
-          <div class="row">     <div class=" col-md-9 col-lg-9 col-sm-12">   
-                  <div class="togglerow mb-5" style="justify-content: space-between;"> 
-                  <button id="map1Button" class="btn primary parallelogram-link">SR 520 Construction Map</button>&nbsp;&nbsp;
-                  <button id="map2Button" class="btn secondary parallelogram-link" style="margin-left: 35px;">WSDOT Travel Map</button>&nbsp;&nbsp;
-                </div>
-                  <!-- Map Column -->
-              
-                  <!-- <div class="mapcontainer"> -->
-                  <div id="map1" class="d-block mapcontainer">
-
-                    <iframe src="https://sr520-map.azurewebsites.net/" style="border: none; min-height: 755px; max-height: 760px; width: 100%;"></iframe>   
-                      
-                    <!-- <p class="mt-5" style="font-weight: 400; line-height: 40px;">Want to know what SR 520 construction activities are underway or coming soon? Search by date or and click on the icons on the map below for more details.</p>
-                    <div style="display: inline-flex; flex-direction: row;"> 
-                 
-                  </div>
-                      <div id="map"></div> -->
-                      </div>
-
-              <!-- iframe Map -->
-        
-            <div id="map2" class="d-none"><p></p>               
-              <!-- <iframe src="https://wsdot.com/Travel/Real-time/Map/?featuretype=camera&featureid=9648" width="100%" height="600px"></iframe> -->
-              <iframe src="https://wsdot.com/Travel/Real-time/Map/?featuretype=camera&featureid=9648" width="100%" height="700px"></iframe>     
-            </div>            
-          <!-- </div> -->
-           <!-- Map Toggle Button -->       
-           <p style="font-size: 18px; font-weight: 400;"><i>Note: This tool is presented for planning purposes only. Construction work is dependent on weather and other factors, and activities are subject to change.</i></p><br>         
-              </div>   
-              <!-- Right Sidebar -->
-              <div class="col-md-3 vanishing pt-5 mt-5">
-                <!-- Card 1 -->
-                <div class="left2 px-5 pt-5">
-                  <!-- <div class="icon-text-pair rhombus-2">
-                    <img src="/img/full_closure.png" width="25px" height="25px">
-                    <a href="#">Full closure</a>
-                  </div>
-                  <div class="icon-text-pair rhombus-2">
-                    <img src="/img/partial_closure.png" width="25px" height="25px">
-                    <a href="https://sr520construction.com/activity/view/68310">Partial closure</a>
-                  </div> -->
-                  <p class="text-center wdot-dkgreen"><strong>Current and upcoming closures</strong></p>
-                  <div class="icon-text-pair rhombus-2">
-                    <img src="/img/whitedash-onred.png" width="25px" height="25px">
-                    <a href="/construction-montlake-boulevard.html">Montlake Boulevard on-ramp to eastbound SR 520 closed weeknights</a>
-                  </div>
-           
-                  <div class="icon-text-pair rhombus-2">
-                    <img src="/img/high_impact_construction.png" width="25px" height="25px">
-                    <a href="/construction-westbound-sr-520.html">Westbound SR 520 off-ramp to East Roanoke Street closed weeknights through 8/10</a>
-                  </div>
-
-                  <div class="icon-text-pair rhombus-2">
-                    <img src="/img/high_impact_construction.png" width="25px" height="25px">
-                    <a href="/construction-lake-washington.html">Lake Washington Boulevard fully closed 7/23 - 8/6</a>
-                  </div>
-                  <!-- <div class="icon-text-pair rhombus-2">
-                    <img src="/img/wgreen-x.png" width="25px" height="25px">
-                    <a href="https://sr520construction.com/activity/view/68310">White X on Green</a>
-                  </div>
-        
-                  <div class="icon-text-pair rhombus-2">
-                    <img src="img/whiteonred-exclamation.png" width="25px" height="25px">
-                    <a href="https://sr520construction.com/activity/view/72918">White on red exclaimation
-                  </a>
-                  </div> -->
-
-                  <div class="icon-text-pair rhombus-2">
-                      <img src="/img/trail_closure.png" width="25px" height="25px">
-                      <a href="/construction-mercer-street.html">Mercer Street on-ramp to northbound I-5 closed overnight, 7/26</a>
-                    </div>
-                    <!-- <div class="icon-text-pair rhombus-2">
-                      <img src="/img/whitedash-onred.png" width="25px" height="25px">
-                      <a href="mock-construction-map.html">Lake Washington Boulevard fully closed 7/23 - 8/6</a>
-                    </div>
-
-                    <div class="icon-text-pair rhombus-2">
-                      <img src="/img/high_impact_construction.png" width="25px" height="25px">
-                      <a href="mock-montlake-boulevard.html">Eastbound SR 520 closed nightly 7/24 & 7/25</a>
-                    </div>
-                     -->
-                    
-                    <br>
-              </div>
-                              
-                </div>
-             <!-- END Right Sidebar col -->
-              </div><br>
-          </div>
-        </div>   
-        </div>
-        </div>
-
-<!-- NEW container for cards start  -->
-
-<div class="container-3card" style="width: 100vw;">
-
-   <!-- #### START second row container ###### -->
-   <div class="container">
-    <div class="row" style="display: flex; flex-direction: row; flex-wrap: wrap; padding-top: 20px; padding-bottom: 20px; ">
-     <div class="col-lg-4 col-md-6 col-sm-10" style="justify-content: space-between;">   
-    <!-- Card 1 start  -->
-       <div class="card h-100 mb-3 center p-4" style="min-height: 570px">
-  
-          <div>
-            <a class="twitter-timeline" data-height="400" href="https://twitter.com/wsdot_520?ref_src=twsrc%5Etfw">
-              Tweets by wsdot_520</a>
-              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-          </div> 
-            <div class="card-body center-btn">
-           <a href="https://twitter.com/wsdot_520" class="btn btn-primary parallelogram-link-sm"><span
-             class="fab fa-twitter">&nbsp;&nbsp;</span>Follow us</a>
-           </div>  
-       </div> 
-       <!-- Card 1end  -->
-     </div>
- <div class="col-md-4 col-lg-4 col-md-6 col-sm-10 center">
-     <!-- Card 2 start  -->
-     <div class="card h-100 mb-3 center p-4" style="min-height: 570px">
-       <div>
-       <iframe src="https://public.earthcam.net/tJ90CoLmq7TzrY396Yd88B9B2qPMb6E316d3h59C-OM!/sr_520__-_montlake_project/camera_1/view_1" width="100%"style="height: 400px; border-radius: 15px;"></iframe>
-      </div>
-       <div class="card-body center-btn">
-         <a style="margin-top: none;" href="https://public.earthcam.net/tJ90CoLmq7TzrY396Yd88B9B2qPMb6E316d3h59C-OM!/sr_520__-_montlake_project/camera_1/view_1" class="btn btn-primary parallelogram-link-sm">Live construction cams</a>
-        </div>
-   </div>
-     <!-- Card 2 end  -->
- </div>
- <div class="col-lg-4 col-md-6 col-sm-10 center">
-     
-  <div class="card h-100" style="min-height: 570px;">
-    <!-- <div class="card-body" style="padding-left: 25px; padding-right: 5px; margin-top: -20px;"> -->
-      <div class="card-body center">
-    <div class="px-4 d-flex flex-column h-100 justify-content-between">
-    <h3 style="color: #007b5f; font-size: 1.4em;">Sign up for email updates</h3>
-    <div class="containernew">
-    <p>
-        Get weekly updates about current and upcoming construction activities straight to your inbox.                             
-      </p>
-      <div class="icon-container">
-        <i style="color: #007b5f;  font-size: 65px" class="fa icon-lg fa-envelope"></i>
-      </div>
-        <p>
-          <em>Read our latest <a href="https://content.govdelivery.com/accounts/WADOT/bulletins/36256cb">Rest of the West News</a>.</em>
-        </p>
-        <p class="card-subtext" style="font-size: 15px;">
-          To sign up for one of both of our email newsletters, 
-          click the buttons below and enter your email address. 
-          You can 
-          <a href="https://public.govdelivery.com/accounts/WADOT/subscriber/new">
-            access your subscription preferences
-          </a> at any time.
-        </p>
-      </div>
-      <div class="card-btn-container" >
-        <a href="https://public.govdelivery.com/accounts/WADOT/subscriber/new?topic_id=WADOT_376" class="btn btn-primary parallelogram-link-sm" style="padding-left: 0;">Rest of the West News sign-up</a><br>
-        <a href="https://public.govdelivery.com/accounts/WADOT/subscriber/new?topic_id=WADOT_68" class="btn btn-primary parallelogram-link-sm">Program News sign-up</a>
-      </div>
-      </div>
-    </div>
-  </div>
-    </div>
-  </div>
-
-  </div>
-        </div>   
-        
-        <!-- Card section END -->
-    </div>
-</div>
 
 
 
-  </div>
+</div> 
 <!-- ### div below closes the main container ## -->
-</div>
+
       </main>
 
  <!-- ## Start footer ###  -->
