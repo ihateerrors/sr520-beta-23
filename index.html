@@ -128,7 +128,7 @@
     <div class="navwrap" style="z-index: 110; width: 100%">
       <div
         class="container-fluid nav-container">
-        <a href="https://wsdot.wa.gov/construction-planning/major-projects/sr-520-bridge-replacement-and-hov-program">
+        <a href="/index.html">
           <img class="navicon" src="img/sr520.png" style="padding-bottom: 12px; padding-left: 12px"/></a>
         <div class="navbar navbar navbar-expand-md navbar-light bg-none" style="background-color: transparent; float: center" id="navbar" role="nav">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: 25px; background-color: #97d700; color: #fff">
@@ -137,10 +137,7 @@
           <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="menu2 nav" id="nav2">
               <li>
-                <a
-                  class="nav-rhombus" id="map-navlink"
-                  style="font-style: normal"
-                  href="index.html"
+                <a class="nav-rhombus" id="map-navlink" style="font-style: normal" href="#construction-map"
                   >Construction Map</a
                 >
               </li>
@@ -175,14 +172,13 @@
     <!-- #### END NAV section ##### --> 
     <div id="alert-banner-top" class="container-fluid"  style="width: 100vw; padding-top: 1.5em; z-index: -1;">
       <div class="row">
-        <div class="orange-banner" style="background-color: #ffb500; width: 100vw; min-height: max-content; justify-content: center;">    
-          <div style="margin-left: 7%;"> 
-            <p class="alerthead"><strong>No closures in effect today.
-              
-            </p>   
-            
-          </div> 
-        </div>
+      <div class="orange-banner" style="background-color: #ffb500; width: 100vw; min-height: max-content; justify-content: center;">    
+         <div style="margin-left: 7%; padding-top:1em; padding-bottom: 1em"> 
+        <span style="font-size: 1.4em; font-weight: 700;">Lake Washington Boulevard fully closed 7/23 - 8/4</span>
+         <p>7/23/2023 to 8/4/2023<br> 10:00 p.m. to Noon. <a href="/construction-lake-washington.html">Read more</a></p>      
+
+       </div> 
+       </div>
       </div>
     </div>
   </div> 
@@ -203,17 +199,18 @@
         </div>
         <div id="construction-map" class="container-fluid">
 
-          <div class="row">     <div class=" col-md-9 col-lg-9 col-sm-12">   
-                  <div class="togglerow" style="justify-content: space-between;"> 
-                  <button id="map1Button" class="btn primary parallelogram-link">SR 520 Construction Map</button>&nbsp;&nbsp;
-                  <button id="map2Button" class="btn secondary parallelogram-link" style="margin-left: 10px;">WSDOT Travel Map</button>&nbsp;&nbsp;
+          <div class="row">     
+            <div class="col-lg-9 col-md-12 col-sm-12">   
+                  <div class="togglerow pb-5" style="justify-content: space-between;"> 
+                  <button id="map1Button" class="btn primary parallelogram-link map-tab" >SR 520 Construction Map</button>
+                  <button id="map2Button" class="btn secondary parallelogram-link map-tab" >WSDOT Travel Map</button>
                 </div>
                   <!-- Map Column -->
               
                   <!-- <div class="mapcontainer"> -->
                   <div id="map1" class="d-block mapcontainer">
 
-                    <iframe src="https://sr520-map.azurewebsites.net/" style="border: none; min-height: 655px; max-height: 660px; width: 100%;"></iframe>   
+                    <iframe src="https://sr520-map.azurewebsites.net/" style="border: none; min-height: 750px; max-height: 756px; width: 100%;"></iframe>   
                       
                     <!-- <p class="mt-5" style="font-weight: 400; line-height: 40px;">Want to know what SR 520 construction activities are underway or coming soon? Search by date or and click on the icons on the map below for more details.</p>
                     <div style="display: inline-flex; flex-direction: row;"> 
@@ -226,7 +223,7 @@
         
             <div id="map2" class="d-none"><p></p>               
               <!-- <iframe src="https://wsdot.com/Travel/Real-time/Map/?featuretype=camera&featureid=9648" width="100%" height="600px"></iframe> -->
-              <iframe src="https://wsdot.com/Travel/Real-time/Map/?featuretype=camera&featureid=9648" width="100%" height="600px"></iframe>     
+              <iframe src="https://wsdot.com/Travel/Real-time/Map/?featuretype=camera&featureid=9648" width="100%" height="750px"></iframe>     
             </div>            
           <!-- </div> -->
            <!-- Map Toggle Button -->       
@@ -330,7 +327,8 @@
         </div>
    </div>
      <!-- Card 2 end  -->
- </div>
+    </div>
+    <!-- Card 3 Start  -->
  <div class="col-lg-4 col-md-6 col-sm-10 center">
      
   <div class="card h-100" style="min-height: 570px;">
@@ -365,6 +363,8 @@
     </div>
   </div>
     </div>
+     <!-- Card 3 end  -->
+
   </div>
 
   </div>
