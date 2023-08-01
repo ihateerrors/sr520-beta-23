@@ -1387,3 +1387,7 @@ a.button {
 .card-btn-container .btn-primary {
   margin: 0;
 }
+
+.greenborder {
+  border: 3px solid #007b5f;
+}
