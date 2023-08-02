@@ -9,7 +9,15 @@ body {
   overflow-x: hidden;
 }
 
-
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow: hidden;
+}
+body {
+  height: 100%;
+  overflow-y: auto;
+}
 
 .btn.search-form__submit {
     background: #97d700;
@@ -347,8 +355,8 @@ border-width: 1px 1px 5px;
 .wdot-dkgreen {color:#007b5f;}
 
 .map-tab {
-  /* border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0; */
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
   margin: 0 0 0 10px;
 }
 
@@ -937,6 +945,10 @@ border-width: 1px 1px 5px;
     .container3 {
       display: none;
     }
+    .map-tab {
+      font-size: 16px;
+      padding: 8px 12px;
+    }
 }
 
 dialog {
@@ -1389,5 +1401,21 @@ a.button {
 }
 
 .greenborder {
-  border: 3px solid #007b5f;
+  border: 5px solid #007b5f;
+}
+
+@media (max-width: 480px) {
+  .togglerow {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+  .map-tab {
+    margin-top: 0;
+  }
+  button#map2Button {
+    margin-left: 22px ;
+    margin-bottom: 1px;
+
+  }
 }
